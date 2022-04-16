@@ -12,13 +12,19 @@ import java.io.PrintWriter;
 @WebServlet(name = "themMathangServlet", value = "/them-mat-hang")
 public class ThemMatHangServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+        showNewForm(request, response);
+
+
+    }
+
+    private void showNewForm(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String url = "";
         url = "/themmathang/themmathang.jsp";
-
         // forward request and response to the view
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-
     }
 }

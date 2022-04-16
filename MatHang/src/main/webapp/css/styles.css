@@ -248,7 +248,6 @@ tr{
 
 .weight-unit {
     border-left: none;
-    outline: none;
     color: var(--text-color);
 }
 
@@ -317,7 +316,7 @@ th {
 }
 
 .attribute-name {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -325,7 +324,7 @@ th {
 }
 
 .attribute-value {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -333,7 +332,7 @@ th {
 }
 
 .unit-name {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -341,7 +340,7 @@ th {
 }
 
 .unit-value {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);

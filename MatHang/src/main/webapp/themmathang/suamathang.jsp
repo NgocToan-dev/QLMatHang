@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
+    <title>Edit Product</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -70,7 +70,7 @@
         <form action="" class="form__add-product">
             <div class="app__add-product">
                 <div class="content__header">
-                    <div class="content__name">Thêm mặt hàng</div>
+                    <div class="content__name">Sửa mặt hàng</div>
                     <!-- <div class="btn-accept"> -->
                     <!-- <a href="" class="btn-accept-link">Xác nhận</a> -->
                     <button type="submit"  class="btn-accept btn-accept-button">Xác nhận</button>
@@ -149,8 +149,8 @@
                     <div class="content__attributes-items">
                         <div class="item-name">Thuộc tính bổ sung</div>
                         <div class="item-content">
-                            <input type="hidden" id="numatb" name="numatb">
                             <table id="table-atb">
+                                <input type="hidden" id="numatb" name="numatb">
                                 <tr>
                                     <th style="width: 306px;">Tên thuộc tính</th>
                                     <th style="width: 305px;">Giá trị</th>
