@@ -241,17 +241,17 @@
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                        id="inlineRadio" value="option1" checked>
-                                <label class="form-check-label" for="inlineRadio1">Miền bắc</label>
+                                <label class="form-check-label" for="inlineRadio1">Miền Bắc</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                        id="inlineRadio1" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Miền nam</label>
+                                <label class="form-check-label" for="inlineRadio2">Miền Trung</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                        id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Miền trung</label>
+                                <label class="form-check-label" for="inlineRadio2">Miền Nam</label>
                             </div>
                         </div>
                     </div>
