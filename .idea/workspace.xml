@@ -35,18 +35,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm config DAO, chỉ cần extend ra là dùng được">
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/MatHang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/MatHang.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/ConnectionUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/MySQLConnUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +52,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -159,8 +154,16 @@
       <workItem from="1650158043163" duration="2453000" />
       <workItem from="1650160540298" duration="177000" />
       <workItem from="1650160730166" duration="81000" />
-      <workItem from="1650161388324" duration="3093000" />
+      <workItem from="1650161388324" duration="10635000" />
     </task>
+    <task id="LOCAL-00001" summary="Thêm config DAO, chỉ cần extend ra là dùng được">
+      <created>1650164845233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650164845233</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +179,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Thêm config DAO, chỉ cần extend ra là dùng được" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thêm config DAO, chỉ cần extend ra là dùng được" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

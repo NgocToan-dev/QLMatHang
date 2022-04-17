@@ -227,6 +227,7 @@ tr{
 .atb {
     margin-top: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .atb-name {
@@ -249,6 +250,7 @@ tr{
 .weight-unit {
     border-left: none;
     color: var(--text-color);
+    width: 50px;
 }
 
 .weight-unit-item {
@@ -351,7 +353,7 @@ th {
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    background-color: #0B5ED7;
+    background-color: #2C80FE;
     margin-top: 10px;
 }
 
@@ -380,4 +382,14 @@ th {
     height: calc(100% - 50px);
     width: 100%;
     overflow: auto;
+}
+.warningText {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    color: #fd3d3d;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 5px;
+    left: 50px;
 }

@@ -73,7 +73,7 @@
                     <div class="content__name">Thêm mặt hàng</div>
                     <!-- <div class="btn-accept"> -->
                     <!-- <a href="" class="btn-accept-link">Xác nhận</a> -->
-                    <button type="submit"  class="btn-accept btn-accept-button">Xác nhận</button>
+                    <button type="submit"  class="btn-accept btn-accept-button btn-save">Xác nhận</button>
                     <!-- </div> -->
                 </div>
                 <div class="content__attributes">
@@ -87,37 +87,39 @@
                                             <div class="col-4">
                                                 <div class="atb">
                                                     <span class="atb-name">Mã mặt hàng<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productid" name="productid" class="atb-input input-group" placeholder="Nhập Mã mặt hàng" required>
+                                                    <input type="text" id="productid" name="productid" class="atb-input input-group form-control shadow-none form-control shadow-none" placeholder="Nhập Mã mặt hàng" required>
+                                                    <span id="warningProductID" class="warningText" hidden="true"></span>
                                                 </div>
                                                 <div class="atb">
                                                     <span class="atb-name">Tên mặt hàng<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productname" name="productname" class="atb-input input-group" placeholder="Nhập Tên mặt hàng" required>
+                                                    <input type="text" id="productname" name="productname" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tên mặt hàng" required>
+                                                    <span id="warningProductname" class="warningText" hidden="true"></span>
                                                 </div>
                                                 <div class="atb">
                                                     <span class="atb-name">Giá bán lẻ<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group" placeholder="Nhập Giá bán lẻ" required>
+                                                    <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán lẻ" required>
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="atb">
                                                     <span class="atb-name">Giá bán sỉ<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group" placeholder="Nhập Giá bán sỉ" required>
+                                                    <input type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán sỉ" required>
                                                 </div>
                                                 <div class="atb">
                                                     <span class="atb-name">Đơn vị tính<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productunit" name="productunit" class="atb-input input-group" placeholder="Nhập Đơn vị tính" required>
+                                                    <input type="text" id="productunit" name="productunit" class="atb-input input-group form-control shadow-none" placeholder="Nhập Đơn vị tính" required>
                                                 </div>
                                                 <div class="atb">
                                                     <span class="atb-name">Tồn kho ban đầu<span style="color: red"> *</span></span>
-                                                    <input type="text" id="stock" name="stock" class="atb-input input-group" placeholder="Nhập Tồn kho ban đầu" required>
+                                                    <input type="text" id="stock" name="stock" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tồn kho ban đầu" required>
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="atb">
                                                     <span class="atb-name">Khối lượng<span style="color: red"> *</span></span>
                                                     <div class="weight">
-                                                        <input type="text" id="productweight" name="productweight" class="atb-input input-group" placeholder="Nhập Khối lượng" required>
-                                                        <select name="weightunit" id="weightunit" class="weight-unit">
+                                                        <input type="text" id="productweight" name="productweight" class="atb-input input-group form-control shadow-none" placeholder="Nhập Khối lượng" required>
+                                                        <select name="weightunit" id="weightunit" class="weight-unit form-select">
                                                             <option value="g" class="weight-unit-item">g</option>
                                                             <option value="kg" class="weight-unit-item">kg</option>
                                                         </select>
@@ -125,7 +127,7 @@
                                                 </div>
                                                 <div class="atb">
                                                     <span class="atb-name">Phân loại</span>
-                                                    <select name="productcategory" id="productcategory" class="atb-input input-group category-select">
+                                                    <select name="productcategory" id="productcategory" class="atb-input input-group form-control shadow-none category-select">
                                                         <option value="quanao" class="category-item">Quần áo</option>
                                                         <option value="dodientu" class="category-item">Đồ điện tử</option>
                                                     </select>
@@ -135,12 +137,12 @@
                                     </div>
                                     <div class="general-info__description">
                                         <span class="atb-name">Mô tả</span>
-                                        <textarea onclick="focusDes()" class="info-des" id="ifodesscription" name="ifodesscription" rows="4" cols="50" placeholder="Nhập Mô tả"></textarea>
+                                        <textarea  class="info-des form-control shadow-none" id="ifodesscription" name="ifodesscription" rows="4" cols="50" placeholder="Nhập Mô tả"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-3 product-image">
                                     <span>Ảnh (.png hoặc .jpg)<span style="color: red"> *</span></span>
-                                    <input type="file" id="img" name="img" class="img" onchange="readURL(this)" required>
+                                    <input type="file" id="img" name="img" class="img form-control" required>
                                     <img src="https://endlessicons.com/wp-content/uploads/2012/11/image-holder-icon.png" alt="Your image" id="img-chose" class="img-chose">
                                 </div>
                             </div>
@@ -162,10 +164,12 @@
                                     <td><span id="delete-attribute" onclick="deleteAtb()" class="delete-row">Xóa</span></td>
                                 </tr> -->
                             </table>
-                            <div class="table-add-row" onclick="addAtb()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
-                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                </svg>
+                            <div class="table-add-row" id="addAtb">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                    </svg>
+
                             </div>
                         </div>
                     </div>
@@ -185,7 +189,7 @@
                                     <td><span id="delete-unit" onclick="deleteUnit()" class="delete-row">Xóa</span></td>
                                 </tr> -->
                             </table>
-                            <div class="table-add-row" onclick="addUnit()">
+                            <div class="table-add-row btn-save" id="addUnit" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
                                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                                 </svg>
@@ -203,7 +207,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-<script src="${pageContext.request.contextPath}/js/themmathang.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="module" src="${pageContext.request.contextPath}/js/themmathang.js"></script>
 </body>
 
 </html>
