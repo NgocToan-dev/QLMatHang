@@ -29,7 +29,13 @@ Common.ValidateInputBase = function (inputData, type) {
             }
             break;
         case resource.ValidateType.SpecialChar:
-            var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+            var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+            if (format.test(inputText)) {
+                result = "Không để ký tự đặc biệt";
+            }
+            break;
+        case resource.ValidateType.SpecialCharTextArea:
+            var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|<>\/?~]/;
             if (format.test(inputText)) {
                 result = "Không để ký tự đặc biệt";
             }
@@ -41,24 +47,18 @@ Common.ValidateInputBase = function (inputData, type) {
     return result;
 }
 Common.ValidateLength = function (inputData, minLength, maxLength) {
-    $(inputData).on('keyup', function (e) {
         // lấy giá trị input
         var inputText = $(inputData).val();
-        switch (inputText) {
-            case resource.ValidateType.MinLength:
-                if (inputText.length < minLength) {
-                    return `Tối thiểu ${minLength} ký tự`;
-                }
-                break;
-            case resource.ValidateType.MaxLength:
-                // kiểm tra dộ dài chu
-                if (inputText.length < maxLength) {
-                    return `Tối đa ${maxLength} ký tự`
-                }
-                break;
+        if (inputText.length < minLength) {
+            var result = "Tối thiểu " + minLength + " ký tự";
+            return result;
+        }
+        // kiểm tra dộ dài chu
+        if (inputText.length > maxLength) {
+            var result = "Tối đa " + maxLength + " ký tự";
+            return result;
         }
         return "";
-    });
 }
 
 export default Common;

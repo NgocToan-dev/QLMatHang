@@ -8,9 +8,6 @@ import java.util.List;
 
 public class MatHangDAO extends DAO{
 
-    private static final String INSERT_MAT_HANG = "";
-    private static final String UPDATE_MATH_HANG = "";
-
     public MatHangDAO () {
         super();
     }

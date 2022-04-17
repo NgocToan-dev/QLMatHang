@@ -6,7 +6,8 @@ Resource.ValidateType = {
     Email: 3,
     SpecialChar: 4,
     MaxLength: 5,
-    MinLength: 6
+    MinLength: 6,
+    SpecialCharTextArea: 7,
 }
 
 

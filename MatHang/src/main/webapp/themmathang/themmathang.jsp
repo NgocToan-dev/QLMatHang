@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
+    <title>Thêm mặt hàng</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -84,66 +85,77 @@
                                 <div class="col-9 general-info">
                                     <div class="container">
                                         <div class="row general-info__basic">
-                                            <div class="col-4">
-                                                <div class="atb">
+                                            <div class="row">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Mã mặt hàng<span style="color: red"> *</span></span>
                                                     <input type="text" id="productid" name="productid" class="atb-input input-group form-control shadow-none form-control shadow-none" placeholder="Nhập Mã mặt hàng" required>
                                                     <span id="warningProductID" class="warningText" hidden="true"></span>
                                                 </div>
-                                                <div class="atb">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Tên mặt hàng<span style="color: red"> *</span></span>
                                                     <input type="text" id="productname" name="productname" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tên mặt hàng" required>
                                                     <span id="warningProductname" class="warningText" hidden="true"></span>
                                                 </div>
-                                                <div class="atb">
-                                                    <span class="atb-name">Giá bán lẻ<span style="color: red"> *</span></span>
+                                                <div class="atb col-4">
+                                                    <span class="atb-name">Giá bán lẻ (vnđ)<span style="color: red"> *</span></span>
                                                     <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán lẻ" required>
+                                                    <span id="warningProductRetailprice" class="warningText" hidden="true"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="atb">
+                                            <div class="row">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Giá bán sỉ<span style="color: red"> *</span></span>
                                                     <input type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán sỉ" required>
+                                                    <span id="warningProductwholesaleprice" class="warningText" hidden="true"></span>
                                                 </div>
-                                                <div class="atb">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Đơn vị tính<span style="color: red"> *</span></span>
                                                     <input type="text" id="productunit" name="productunit" class="atb-input input-group form-control shadow-none" placeholder="Nhập Đơn vị tính" required>
+                                                    <span id="warningProductunit" class="warningText" hidden="true"></span>
                                                 </div>
-                                                <div class="atb">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Tồn kho ban đầu<span style="color: red"> *</span></span>
                                                     <input type="text" id="stock" name="stock" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tồn kho ban đầu" required>
+                                                    <span id="warningStock" class="warningText" hidden="true"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <div class="atb">
+                                            <div class="row">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Khối lượng<span style="color: red"> *</span></span>
                                                     <div class="weight">
                                                         <input type="text" id="productweight" name="productweight" class="atb-input input-group form-control shadow-none" placeholder="Nhập Khối lượng" required>
-                                                        <select name="weightunit" id="weightunit" class="weight-unit form-select">
+                                                        <select name="weightunit" id="weightunit" class="weight-unit form-select" style="box-shadow: none;">
                                                             <option value="g" class="weight-unit-item">g</option>
                                                             <option value="kg" class="weight-unit-item">kg</option>
                                                         </select>
+                                                        <span id="warningProductweight" class="warningText" hidden="true"></span>
                                                     </div>
                                                 </div>
-                                                <div class="atb">
+                                                <div class="atb col-4">
                                                     <span class="atb-name">Phân loại</span>
                                                     <select name="productcategory" id="productcategory" class="atb-input input-group form-control shadow-none category-select">
-                                                        <option value="quanao" class="category-item">Quần áo</option>
-                                                        <option value="dodientu" class="category-item">Đồ điện tử</option>
+                                                        <c:forEach items="${listCategory}" var="category">
+                                                            <option value="${category.getCategoryId()}" class="category-item">
+                                                                <c:out value="${category.getName()}" />
+                                                            </option>
+<%--                                                            <option value="quanao" class="category-item">Quần áo</option>--%>
+                                                        </c:forEach>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="general-info__description">
+                                    <div class="general-info__description" style="position: relative;">
                                         <span class="atb-name">Mô tả</span>
-                                        <textarea  class="info-des form-control shadow-none" id="ifodesscription" name="ifodesscription" rows="4" cols="50" placeholder="Nhập Mô tả"></textarea>
+                                        <textarea  maxlength="255" class="info-des form-control shadow-none" id="ifodesscription" name="ifodesscription" rows="4" cols="50" placeholder="Nhập Mô tả"></textarea>
+                                        <span id="warningInfoDes" class="warningTextArea" hidden="true"></span>
                                     </div>
                                 </div>
                                 <div class="col-3 product-image">
                                     <span>Ảnh (.png hoặc .jpg)<span style="color: red"> *</span></span>
-                                    <input type="file" id="img" name="img" class="img form-control" required>
+                                    <input onchange="readURL()" type="file" id="img" name="img" class="img form-control shadow-none" required>
                                     <img src="https://endlessicons.com/wp-content/uploads/2012/11/image-holder-icon.png" alt="Your image" id="img-chose" class="img-chose">
+                                    <span id="warningImg" class="warningImg" hidden="true"></span>
                                 </div>
                             </div>
                         </div>
