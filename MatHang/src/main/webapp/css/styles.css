@@ -106,12 +106,11 @@ tr{
 :root {
     --text-color: #5C2C39;
     --content-background: #F4F4F4;
-    --border-color: #B6A9A9;
+    --border-color: #ced4da;
 }
 
 .app {
     background-color: #F4F4F4;
-    width: var(--app-width);
 
     margin-left: auto;
     margin-right: auto;
@@ -227,6 +226,7 @@ tr{
 .atb {
     margin-top: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .atb-name {
@@ -248,8 +248,8 @@ tr{
 
 .weight-unit {
     border-left: none;
-    outline: none;
     color: var(--text-color);
+    width: 55px;
 }
 
 .weight-unit-item {
@@ -266,17 +266,20 @@ tr{
 
 .product-image {
     background-color: white;
+    padding-top: 7px;
+    position: relative;
 }
 
 .img {
     width: 242px;
     margin-top: 8px;
     margin-bottom: 8px;
+    box-shadow: none;
 }
 
 .img-chose {
     width: 240px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #ced4da;
     height: auto;
     margin-top: 20px;
 
@@ -317,7 +320,7 @@ th {
 }
 
 .attribute-name {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -325,7 +328,7 @@ th {
 }
 
 .attribute-value {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -333,7 +336,7 @@ th {
 }
 
 .unit-name {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -341,7 +344,7 @@ th {
 }
 
 .unit-value {
-    width: 100%;
+    width: calc(100% - 10px);
     outline: none;
     border: 0;
     color: var(--text-color);
@@ -352,7 +355,7 @@ th {
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    background-color: #0B5ED7;
+    background-color: #2C80FE;
     margin-top: 10px;
 }
 
@@ -381,4 +384,47 @@ th {
     height: calc(100% - 50px);
     width: 100%;
     overflow: auto;
+}
+.warningText {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    color: #fd3d3d;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 5px;
+    right: 15px;
+}
+
+.warningImg {
+    position: absolute;
+    top: 9px;
+    background: #fff;
+    color: #fd3d3d;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 5px;
+    right: 72px;
+}
+
+.warningTextTable {
+    position: absolute;
+    top: -20px;
+    background: #fff;
+    color: #fd3d3d;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 5px;
+    right: 1px;
+}
+
+.warningTextArea {
+    position: absolute;
+    top: 0px;
+    background: #fff;
+    color: #fd3d3d;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 5px;
+    right: 25px;
 }
