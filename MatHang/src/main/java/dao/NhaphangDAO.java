@@ -6,9 +6,9 @@ import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class nhaphangDAO extends DAO {
+public class NhaphangDAO extends DAO {
 
-    public nhaphangDAO() {
+    public NhaphangDAO() {
     }
 
     public ArrayList<DonNhapHang> getListDonNhapHang(String action, String keyword) {
