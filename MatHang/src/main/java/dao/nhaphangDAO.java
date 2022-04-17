@@ -1,14 +1,12 @@
 package dao;
 
-import database.DatabaseConnection;
 import model.DonNhapHang;
 
 import java.sql.CallableStatement;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class nhaphangDAO extends DatabaseConnection {
+public class nhaphangDAO extends DAO {
 
     public nhaphangDAO() {
     }
@@ -20,7 +18,6 @@ public class nhaphangDAO extends DatabaseConnection {
         String sql;
 
         try {
-            Connection con = DatabaseConnection.initializeDatabase();
             switch (action) {
                 case "filter":
                     sql = "{call filterDonNhapHang()}";
