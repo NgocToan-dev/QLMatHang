@@ -1,4 +1,7 @@
 package dao;
 
-public class CategoryDAO {
+public class CategoryDAO extends DAO{
+    public CategoryDAO() {
+        super();
+    }
 }
