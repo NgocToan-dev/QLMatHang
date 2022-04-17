@@ -9,11 +9,11 @@ public class DAO {
     public DAO(){
         if(con == null){
             String dbUrl =
-                    "jdbc:mysql://localhost:3306/qlmathang?autoReconnect=true&useSSL=false";
+                    "jdbc:mysql://azuinst.tk:3306/qlmathang?autoReconnect=true&useSSL=false&clientInteractive=true";
             String dbClass = "com.mysql.cj.jdbc.Driver";
             try {
                 Class.forName(dbClass);
-                con = DriverManager.getConnection (dbUrl, "root", "123456789");
+                con = DriverManager.getConnection (dbUrl, "admin", "admin@1234");
             }catch(Exception e) {
                 e.printStackTrace();
             }
