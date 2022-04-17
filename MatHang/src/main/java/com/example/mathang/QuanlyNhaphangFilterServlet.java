@@ -1,6 +1,6 @@
 package com.example.mathang;
 
-import dao.nhaphangDAO;
+import dao.NhaphangDAO;
 import model.DonNhapHang;
 
 import javax.servlet.RequestDispatcher;
@@ -15,10 +15,10 @@ import java.util.ArrayList;
 @WebServlet(name = "/QuanLyNhapHangFilter", value = "/quan-ly-nhap-hang-filter")
 public class QuanlyNhaphangFilterServlet extends HttpServlet {
 
-    private dao.nhaphangDAO nhaphangDAO;
+    private NhaphangDAO nhaphangDAO;
 
     public void init() {
-        nhaphangDAO = new nhaphangDAO();
+        nhaphangDAO = new NhaphangDAO();
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
