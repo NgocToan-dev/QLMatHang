@@ -1,6 +1,6 @@
 .body {
     background-color: #f4f4f4;
-    height: calc(100% - 50px);
+    min-height: calc(100% - 50px);
 }
 
 .button {
@@ -38,12 +38,6 @@
 .list-order {
     width: 98%;
     background-color: white;
-    height: calc(100% - 70px);
+    height: fit-content;
     border-radius: 8px;
-}
-
-.tab1 {
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 1px solid #000;
 }

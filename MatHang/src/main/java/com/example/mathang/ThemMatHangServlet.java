@@ -1,6 +1,8 @@
 package com.example.mathang;
 
+import dao.CategoryDAO;
 import dao.MatHangDAO;
+import model.Category;
 import model.MatHang;
 
 import javax.servlet.RequestDispatcher;
@@ -26,6 +28,14 @@ public class ThemMatHangServlet extends HttpServlet {
             throws ServletException, IOException {
         String url = "";
         url = "/themmathang/themmathang.jsp";
+
+        CategoryDAO categoryDAO = new CategoryDAO();
+        List<Category> categories = categoryDAO.getListCategory();
+
+        for(int i = 0; i < categories.size(); i++) {
+            System.out.println(categories.get(i).getName());
+        }
+        request.setAttribute("listCategory", categories);
         // forward request and response to the view
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);

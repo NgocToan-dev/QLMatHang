@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.Iterator" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.DonNhapHang" %><%--
   Created by IntelliJ IDEA.
   User: donam
   Date: 12/04/2022
@@ -70,19 +72,36 @@
                 <h4>Đơn nhập hàng</h4>
                 <div>
                     <button type="button" title="Tạo đơn nhập hàng" class="btn btn-primary btn-save"><a
-                            href="${pageContext.request.contextPath}/nhaphang/taodonnhaphang.jsp"><i class="fa-solid fa-plus"></i></a>
+                            href="${pageContext.request.contextPath}/nhaphang/taodonnhaphang.jsp"><i
+                            class="fa-solid fa-plus"></i></a>
                     </button>
                 </div>
             </div>
 
             <div class="list-order container-fluid">
                 <ul class="nav">
+
+                    <%--Chỉnh UI tab theo đường dẫn--%>
                     <li class="nav-item">
-                        <a id="tab1" class="nav-link tab1" aria-current="page" href="#" style="color: #2C80FE;">Tất
+                        <% Boolean fromFilterPage = (Boolean) request.getAttribute("filter");
+                            if (!fromFilterPage) {%>
+                        <a id="tab1" class="nav-link " aria-current="page" href="quan-ly-nhap-hang"
+                           style="<%="color: #2C80FE;padding-left: 0;padding-right: 0;border-bottom: 1px solid #000;"%>">Tất
                             cả đơn hàng</a>
+                        <%} else {%>
+                        <a id="tab1" class="nav-link " aria-current="page" href="quan-ly-nhap-hang"
+                           style="<%="padding-left: 0;padding-right: 0;"%>">Tất cả đơn hàng</a>
+                        <%} %>
                     </li>
                     <li class="nav-item">
-                        <a id="tab2" class="nav-link" href="#">Đang giao dịch</a>
+                        <% if (fromFilterPage) {%>
+                        <a id="tab2" class="nav-link " aria-current="page" href="quan-ly-nhap-hang-filter"
+                           style="<%="color: #2C80FE;padding-left: 0;padding-right: 0;border-bottom: 1px solid #000;"%>">Đang
+                            giao dịch</a>
+                        <%} else {%>
+                        <a id="tab2" class="nav-link " aria-current="page" href="quan-ly-nhap-hang-filter"
+                           style="<%="padding-left: 0;padding-right: 0;"%>">Đang giao dịch</a>
+                        <%} %>
                     </li>
                 </ul>
 
@@ -90,9 +109,9 @@
 
                 <div>
                     <form method="post">
-                        <div class="input ">
-                            <input class="form-control mb-3" type="text" name="keyword"
-                                   placeholder="Tìm kiếm đơn hàng..." required>
+                        <div class="input">
+                            <input id="search" class="form-control mb-3" type="text" name="keyword" style="width: 100%;"
+                                   placeholder="Tìm kiếm theo tên hoặc nhà cung cấp">
                         </div>
                     </form>
                 </div>
@@ -103,115 +122,54 @@
                         <tr style='text-align: center;'>
                             <th>Mã đơn</th>
                             <th>Tên nhà cung cấp</th>
-                            <th>Trạng thái</th>
                             <th>Thanh toán</th>
+                            <th>Thời gian thanh toán</th>
                             <th>Nhập kho</th>
+                            <th>Thời gian nhập kho</th>
                             <th>Tổng tiền</th>
-                            <th>Nhân viên tạo</th>
-                            <th>Ngày hẹn giao</th>
+                            <th>Ngày tạo đơn</th>
+                            <th>Ngày duyệt đơn</th>
                         </tr>
                         </thead>
                         <tbody>
+
+                        <%--Check xem có bản ghi ko--%>
+                        <%
+                            ArrayList<DonNhapHang> list = (ArrayList<DonNhapHang>) request.getAttribute("list");
+                            if (list.isEmpty()) {%>
+                        <h5 style="text-align: center"><%="Không có đơn hàng nào phù hơp"%>
+                        </h5>
+                        <%} %>
+
+                        <%--Gen bảng--%>
+                        <%
+                            Iterator it = list.iterator();
+                            while (it.hasNext()) {
+                                DonNhapHang donNhapHang = (DonNhapHang) it.next();
+
+                        %>
                         <tr>
-                            <td>1</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
+                            <td><%=donNhapHang.getTenDon()%>
+                            </td>
+                            <td><%=donNhapHang.getNhaCungCap()%>
+                            </td>
+                            <td><%=donNhapHang.getIsPayment() == 0 ? "Đang giao dịch" : "Đã thanh toán"%>
+                            </td>
+                            <td><%=donNhapHang.getPaymentTime()%>
+                            </td>
+                            <td><%=donNhapHang.getIsImportToWarehouse() == 0 ? "Chưa nhập kho" : "Đã nhập kho"%>
+                            </td>
+                            <td><%=donNhapHang.getImportTime()%>
+                            </td>
+                            <td><%=donNhapHang.getTotalPrice()%>
+                            </td>
+                            <td><%=donNhapHang.getCreateDate()%>
+                            </td>
+                            <td><%=donNhapHang.getConfirmDate()%>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>BigC</td>
-                            <td>Đã thanh toán</td>
-                            <td>50.000.000</td>
-                            <td>Đã nhập</td>
-                            <td>50.000.000</td>
-                            <td>A</td>
-                            <td>04/04/2022</td>
-                        </tr>
+                        <%} %>
+
                         </tbody>
                     </table>
                 </div>
@@ -221,21 +179,8 @@
 </div>
 
 <script>
-    const tab1 = document.getElementById('tab1');
-    const tab2 = document.getElementById('tab2');
-    tab1.addEventListener('click', function onClick() {
-        tab1.style.borderBottom = '1px solid #000';
-        tab2.style.borderBottom = 'none';
-        tab1.style.color = '#2C80FE';
-        tab2.style.color = '#5C2C39';
-    });
-    tab2.addEventListener('click', function onClick() {
-        tab2.style.borderBottom = '1px solid #000';
-        tab1.style.borderBottom = 'none';
-        tab2.style.color = '#2C80FE';
-        tab1.style.color = '#5C2C39';
-
-    });
+    // Auto focus vào input
+    document.getElementById("search").focus();
 
 </script>
 
