@@ -177,7 +177,10 @@
         </div>
     </div>
 </div>
-
+<div id="popupNotify" hidden>
+    <div id="popupNotifyBody">
+    </div>
+</div>
 <script>
     // Auto focus vào input
     document.getElementById("search").focus();
