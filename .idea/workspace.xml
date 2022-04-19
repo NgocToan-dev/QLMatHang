@@ -40,18 +40,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm config DAO, chỉ cần extend ra là dùng được">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
+    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650192211069</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Thêm thông báo thành công">
+      <created>1650380214442</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650380214442</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,49 +195,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Thêm config DAO, chỉ cần extend ra là dùng được" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thêm config DAO, chỉ cần extend ra là dùng được" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650174896367">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1650174896367" />
-    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1650193001699">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1650193001699" />
-    <state width="1493" height="106" key="GridCell.Tab.0.bottom" timestamp="1650192983891">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="106" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650192983891" />
-    <state width="1493" height="106" key="GridCell.Tab.0.center" timestamp="1650192983891">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="106" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650192983891" />
-    <state width="1493" height="106" key="GridCell.Tab.0.left" timestamp="1650192983890">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="106" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650192983890" />
-    <state width="1493" height="106" key="GridCell.Tab.0.right" timestamp="1650192983891">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="106" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650192983891" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1650192624513">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1650192624513" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1650192624517">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1650192624517" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1650193003192">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1650193003192" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1650192664286">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1650192664286" />
+    <MESSAGE value="Thêm thông báo thành công" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thêm thông báo thành công" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
