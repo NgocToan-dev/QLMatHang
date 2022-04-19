@@ -177,7 +177,7 @@
         </div>
     </div>
 </div>
-<div id="popupNotify" hidden>
+<div id="popupNotify">
     <div id="popupNotifyBody">
     </div>
 </div>

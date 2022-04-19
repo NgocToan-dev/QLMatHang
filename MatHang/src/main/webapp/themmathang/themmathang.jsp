@@ -68,13 +68,13 @@
             </div>
         </menu>
         <!--  phần nhét code -->
-        <form action="<%= request.getContextPath() %>/them-mat-hang" class="form__add-product form-submit" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form id="formThem" action="<%= request.getContextPath() %>/them-mat-hang" class="form__add-product form-submit" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="app__add-product">
                 <div class="content__header">
                     <div class="content__name defaultCursor">Thêm mặt hàng</div>
                     <!-- <div class="btn-accept"> -->
                     <!-- <a href="" class="btn-accept-link">Xác nhận</a> -->
-                    <button type="submit"  class="btn-accept btn-accept-button btn-save">Xác nhận</button>
+                    <button type="submit" class="btn-accept btn-accept-button btn-save">Xác nhận</button>
                     <!-- </div> -->
                 </div>
                 <div class="content__attributes">
@@ -88,40 +88,40 @@
                                             <div class="row">
                                                 <div class="atb col-4">
                                                     <span class="atb-name defaultCursor">Mã mặt hàng<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productid" name="productid" class="atb-input input-group form-control shadow-none form-control shadow-none" placeholder="Nhập Mã mặt hàng" required autofocus >
+                                                    <input type="text" id="productid" name="productid" class="atb-input input-group form-control shadow-none form-control shadow-none" placeholder="Nhập Mã mặt hàng"  autofocus >
                                                     <span id="warningProductID" class="warningText validateWarnning" hidden="true"></span>
                                                 </div>
                                                 <div class="atb col-4">
                                                     <span class="atb-name defaultCursor">Tên mặt hàng<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productname" name="productname" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tên mặt hàng" required>
+                                                    <input type="text" id="productname" name="productname" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tên mặt hàng" >
                                                     <span id="warningProductname" class="warningText validateWarnning" hidden="true"></span>
                                                 </div>
                                                 <div class="atb col-4">
                                                     <span class="atb-name defaultCursor">Giá bán lẻ (vnđ)<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán lẻ" required>
+                                                    <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán lẻ" >
                                                     <span id="warningProductRetailprice" class="warningText validateWarnning" hidden="true"></span>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="atb col-4">
                                                     <span class="atb-name defaultCursor">Giá bán sỉ (vnđ)<span style="color: red"> *</span></span>
-                                                    <input pattern="^\d+(?:\.\d{1,2})?$" type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán sỉ" required>
+                                                    <input pattern="^\d+(?:\.\d{1,2})?$" type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán sỉ" >
                                                     <span id="warningProductwholesaleprice" class="warningText validateWarnning" hidden="true"></span>
                                                 </div>
                                                 <div class="atb col-4">
                                                     <span class="atb-name defaultCursor">Đơn vị tính<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productunit" name="productunit" class="atb-input input-group form-control shadow-none" placeholder="Nhập Đơn vị tính" required>
+                                                    <input type="text" id="productunit" name="productunit" class="atb-input input-group form-control shadow-none" placeholder="Nhập Đơn vị tính" >
                                                     <span id="warningProductunit" class="warningText validateWarnning" hidden="true"></span>
                                                 </div>
 <%--                                                <div class="atb col-4">--%>
 <%--                                                    <span class="atb-name">Tồn kho ban đầu<span style="color: red"> *</span></span>--%>
-<%--                                                    <input type="text" id="stock" name="stock" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tồn kho ban đầu" required>--%>
+<%--                                                    <input type="text" id="stock" name="stock" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tồn kho ban đầu" >--%>
 <%--                                                    <span id="warningStock" class="warningText" hidden="true"></span>--%>
 <%--                                                </div>--%>
                                                 <div class="atb col-4">
                                                     <span class="atb-name defaultCursor">Khối lượng<span style="color: red"> *</span></span>
                                                     <div class="weight">
-                                                        <input type="text" id="productweight" name="productweight" class="atb-input input-group form-control shadow-none" placeholder="Nhập Khối lượng" required>
+                                                        <input type="text" id="productweight" name="productweight" class="atb-input input-group form-control shadow-none" placeholder="Nhập Khối lượng" >
                                                         <select name="weightunit" id="weightunit" class="weight-unit form-select" style="box-shadow: none;">
                                                             <option value="1" class="weight-unit-item">g</option>
                                                             <option value="2" class="weight-unit-item">kg</option>
@@ -153,7 +153,7 @@
                                 </div>
                                 <div class="col-3 product-image">
                                     <span class="defaultCursor">Ảnh (.jpg)<span style="color: red"> *</span></span>
-                                    <input onchange="readURL()" type="file" id="img" name="img" class="img form-control shadow-none" required>
+                                    <input type="file" id="img" name="img" class="img form-control shadow-none" >
                                     <img src="https://endlessicons.com/wp-content/uploads/2012/11/image-holder-icon.png" alt="Your image" id="img-chose" class="img-chose">
                                     <span id="warningImg" class="warningImg validateWarnning" hidden="true"></span>
                                 </div>
@@ -214,7 +214,7 @@
         </form>
     </div>
 </div>
-<div id="popupNotify" hidden>
+<div id="popupNotify" >
     <div id="popupNotifyBody">
     </div>
 </div>
