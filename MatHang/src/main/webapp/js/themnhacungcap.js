@@ -43,6 +43,9 @@ function validateWhenSubmit(){
         if(result === ""){
             result = validatePhoneNcc($("#phoneNCC"));
         }
+        if (result !== "") {
+            e.preventDefault();
+        }
     })
 }
 
@@ -114,7 +117,6 @@ function validateNameNcc(control){
 }
 
 function validatePhoneNcc(control){
-    debugger
     var result = "";
     result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
     if (result === "") {

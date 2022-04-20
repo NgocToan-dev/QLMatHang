@@ -40,37 +40,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb3dfdc-0c30-491e-a818-501335c11e8a" name="Changes" comment="">
+    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SearchMHServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CapNhaDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CapNhaDonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CheckLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CheckLoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/TaoDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/TaoDonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaNhapKho.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaNhapKho.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaThanhToan.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaThanhToan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/trangchu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/LogoutServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaphangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaphangDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themnhacungcap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CheckLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CheckLoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/trangchu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +69,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix1" />
+        <entry key="$PROJECT_DIR$" value="devtest" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -149,7 +137,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="f594090b-d72f-4077-bcc4-72c3cd5befe2" />
+        <option name="BASE_DIRECTORY_NAME" value="d5e02aae-3c0b-4a65-8f19-2a24a165697c" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -157,7 +145,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53837" />
+        <option name="DEBUG_PORT" value="54484" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />

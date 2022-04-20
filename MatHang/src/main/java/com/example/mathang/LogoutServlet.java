@@ -1,5 +1,7 @@
 package com.example.mathang;
 
+import model.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +14,10 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         HttpSession session = request.getSession();
-        session.removeAttribute("account");
-        response.sendRedirect("index.jsp");
+        User u = (User)session.getAttribute("account");
+        if(u != null){
+            session.removeAttribute("account");
+        }
 
     }
 }
