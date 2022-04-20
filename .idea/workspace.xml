@@ -40,24 +40,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="ban moi">
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/BaoSuaThanhCongServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/BaoThemThanhCongServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/baosuathanhcong.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/baothemthanhcong.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SuaMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SuaMatHangServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaphangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaphangDAO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +66,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -110,19 +109,21 @@
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+    <configuration name="Unnamed" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY" nameIsGenerated="true">
       <option name="adminPort" value="8005" />
       <option name="contextPath" value="/MatHang" />
       <option name="docBase" value="$PROJECT_DIR$/MatHang/src/main/webapp" />
-      <option name="envOptions" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="passParentEnvironmentVariables" value="true" />
       <option name="port" value="8080" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/8.5.72" />
+          <option name="name" value="Apache Tomcat/8.5.78" />
           <option name="number" value="0" />
-          <option name="path" value="F:\Download\Tomcat8\apache-tomcat-8.5.72" />
-          <option name="version" value="8.5.72.0" />
+          <option name="path" value="F:\ClassSubject\DamBaoChatLuongPhanMem\apache-tomcat-8.5.78" />
+          <option name="version" value="8.5.78.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
@@ -169,9 +170,6 @@
       <workItem from="1650160730166" duration="81000" />
       <workItem from="1650161388324" duration="10635000" />
       <workItem from="1650174798921" duration="18002000" />
-      <workItem from="1650388626304" duration="3757000" />
-      <workItem from="1650392847781" duration="5295000" />
-      <workItem from="1650420055192" duration="4673000" />
     </task>
     <task id="LOCAL-00001" summary="Thêm config DAO, chỉ cần extend ra là dùng được">
       <created>1650164845233</created>
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650380214442</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Thêm thông báo thành công">
+      <created>1650381546626</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650381546626</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,34 +215,22 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Thêm config DAO, chỉ cần extend ra là dùng được" />
     <MESSAGE value="Thêm thông báo thành công" />
     <option name="LAST_COMMIT_MESSAGE" value="Thêm thông báo thành công" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="1493" height="13" key="GridCell.Tab.0.bottom" timestamp="1650424955328">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="13" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650424955328" />
-    <state width="1493" height="13" key="GridCell.Tab.0.center" timestamp="1650424955328">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="13" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650424955328" />
-    <state width="1493" height="13" key="GridCell.Tab.0.left" timestamp="1650424955328">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="13" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650424955328" />
-    <state width="1493" height="13" key="GridCell.Tab.0.right" timestamp="1650424955328">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="13" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650424955328" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1650420668964">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1650420668964" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MatHang/src/main/java/dao/CategoryDAO.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
