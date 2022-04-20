@@ -157,7 +157,7 @@ public class MatHangDAO extends DAO{
 
     public List<MatHang> search(String key) {
         List<MatHang> list = new ArrayList<>();
-        String sql = "call getListNhaCungCap(?)";
+        String sql = "call getListMatHangAll(?)";
         if (con == null) return list;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -165,7 +165,7 @@ public class MatHangDAO extends DAO{
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 MatHang mh = MatHang.builder().id(rs.getLong(1))
-                        .name(rs.getString(2)).code(rs.getString(3)).build();
+                        .code(rs.getString(2)).name(rs.getString(3)).build();
                 list.add(mh);
             }
         } catch (Exception e) {
