@@ -67,15 +67,6 @@
                 Đăng xuất
             </div>
         </menu>
-        <% if ((application.getAttribute("check") == "1") && (application.getAttribute("messages") != null)) {%>
-        <div id="popupNotify">
-            <div id="popupNotifyBody">
-                <%= application.getAttribute("messages")%>
-                <% application.setAttribute("check", "0"); %>
-            </div>
-        </div>
-        <% }%>
-
         <!--  phần nhét code -->
         <form id="formThem" action="<%= request.getContextPath() %>/them-mat-hang" class="form__add-product form-submit" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="app__add-product">
@@ -83,7 +74,6 @@
                     <div class="content__name defaultCursor">Thêm mặt hàng</div>
                     <!-- <div class="btn-accept"> -->
                     <!-- <a href="" class="btn-accept-link">Xác nhận</a> -->
-                    <div id="successNotify"></div>
                     <button type="submit" class="btn-accept btn-accept-button btn-save">Xác nhận</button>
                     <!-- </div> -->
                 </div>
@@ -224,7 +214,10 @@
         </form>
     </div>
 </div>
-
+<div id="popupNotify" >
+    <div id="popupNotifyBody">
+    </div>
+</div>
 
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

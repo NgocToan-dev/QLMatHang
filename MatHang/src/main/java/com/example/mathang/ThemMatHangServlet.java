@@ -10,7 +10,6 @@ import model.ConversionUnit;
 import model.MatHang;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -65,7 +64,6 @@ public class ThemMatHangServlet extends HttpServlet {
             System.out.println(categories.get(i).getName());
         }
         request.setAttribute("listCategory", categories);
-
         // forward request and response to the view
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
@@ -75,7 +73,7 @@ public class ThemMatHangServlet extends HttpServlet {
     public void insertMatHang(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
 
-        String code = toUTF8String(request.getParameter("productid"));
+        String code = request.getParameter("productid");
         String name = toUTF8String(request.getParameter("productname"));
         Part part = request.getPart("img");
         InputStream image = part.getInputStream();
@@ -99,13 +97,7 @@ public class ThemMatHangServlet extends HttpServlet {
 
         daoProcesssing(mathang);
 
-        String htmlMessage = "Thêm thành công";
-        String check = "1";
-
-        ServletContext sc = request.getServletContext();
-        sc.setAttribute("messages", htmlMessage);
-        sc.setAttribute("check", check);
-        response.sendRedirect("/MatHang/them-mat-hang");
+        response.sendRedirect("/MatHang");
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {

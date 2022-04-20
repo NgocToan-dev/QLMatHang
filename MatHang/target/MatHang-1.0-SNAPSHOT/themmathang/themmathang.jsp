@@ -68,19 +68,18 @@
             </div>
         </menu>
         <!--  phần nhét code -->
-        <form id="formThem" action="<%= request.getContextPath() %>/them-mat-hang" class="form__add-product form-submit" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form action="" class="form__add-product">
             <div class="app__add-product">
                 <div class="content__header">
-                    <div class="content__name defaultCursor">Thêm mặt hàng</div>
+                    <div class="content__name">Thêm mặt hàng</div>
                     <!-- <div class="btn-accept"> -->
                     <!-- <a href="" class="btn-accept-link">Xác nhận</a> -->
-                    <div id="successNotify"></div>
-                    <button type="submit" class="btn-accept btn-accept-button btn-save">Xác nhận</button>
+                    <button type="submit"  class="btn-accept btn-accept-button btn-save">Xác nhận</button>
                     <!-- </div> -->
                 </div>
                 <div class="content__attributes">
                     <div class="content__attributes-items">
-                        <div class="item-name defaultCursor">Thông tin chung</div>
+                        <div class="item-name">Thông tin chung</div>
                         <div class="item-content container">
                             <div class="item-content__main-row row">
                                 <div class="col-9 general-info">
@@ -88,52 +87,52 @@
                                         <div class="row general-info__basic">
                                             <div class="row">
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Mã mặt hàng<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productid" name="productid" class="atb-input input-group form-control shadow-none form-control shadow-none" placeholder="Nhập Mã mặt hàng"  autofocus >
-                                                    <span id="warningProductID" class="warningText validateWarnning" hidden="true"></span>
+                                                    <span class="atb-name">Mã mặt hàng<span style="color: red"> *</span></span>
+                                                    <input type="text" id="productid" name="productid" class="atb-input input-group form-control shadow-none form-control shadow-none" placeholder="Nhập Mã mặt hàng" required>
+                                                    <span id="warningProductID" class="warningText" hidden="true"></span>
                                                 </div>
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Tên mặt hàng<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productname" name="productname" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tên mặt hàng" >
-                                                    <span id="warningProductname" class="warningText validateWarnning" hidden="true"></span>
+                                                    <span class="atb-name">Tên mặt hàng<span style="color: red"> *</span></span>
+                                                    <input type="text" id="productname" name="productname" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tên mặt hàng" required>
+                                                    <span id="warningProductname" class="warningText" hidden="true"></span>
                                                 </div>
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Giá bán lẻ (vnđ)<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán lẻ" >
-                                                    <span id="warningProductRetailprice" class="warningText validateWarnning" hidden="true"></span>
+                                                    <span class="atb-name">Giá bán lẻ (vnđ)<span style="color: red"> *</span></span>
+                                                    <input type="text" id="productretailprice" name="productretailprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán lẻ" required>
+                                                    <span id="warningProductRetailprice" class="warningText" hidden="true"></span>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Giá bán sỉ (vnđ)<span style="color: red"> *</span></span>
-                                                    <input pattern="^\d+(?:\.\d{1,2})?$" type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán sỉ" >
-                                                    <span id="warningProductwholesaleprice" class="warningText validateWarnning" hidden="true"></span>
+                                                    <span class="atb-name">Giá bán sỉ<span style="color: red"> *</span></span>
+                                                    <input type="text" id="productwholesaleprice" name="productwholesaleprice" class="atb-input input-group form-control shadow-none" placeholder="Nhập Giá bán sỉ" required>
+                                                    <span id="warningProductwholesaleprice" class="warningText" hidden="true"></span>
                                                 </div>
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Đơn vị tính<span style="color: red"> *</span></span>
-                                                    <input type="text" id="productunit" name="productunit" class="atb-input input-group form-control shadow-none" placeholder="Nhập Đơn vị tính" >
-                                                    <span id="warningProductunit" class="warningText validateWarnning" hidden="true"></span>
+                                                    <span class="atb-name">Đơn vị tính<span style="color: red"> *</span></span>
+                                                    <input type="text" id="productunit" name="productunit" class="atb-input input-group form-control shadow-none" placeholder="Nhập Đơn vị tính" required>
+                                                    <span id="warningProductunit" class="warningText" hidden="true"></span>
                                                 </div>
-<%--                                                <div class="atb col-4">--%>
-<%--                                                    <span class="atb-name">Tồn kho ban đầu<span style="color: red"> *</span></span>--%>
-<%--                                                    <input type="text" id="stock" name="stock" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tồn kho ban đầu" >--%>
-<%--                                                    <span id="warningStock" class="warningText" hidden="true"></span>--%>
-<%--                                                </div>--%>
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Khối lượng<span style="color: red"> *</span></span>
+                                                    <span class="atb-name">Tồn kho ban đầu<span style="color: red"> *</span></span>
+                                                    <input type="text" id="stock" name="stock" class="atb-input input-group form-control shadow-none" placeholder="Nhập Tồn kho ban đầu" required>
+                                                    <span id="warningStock" class="warningText" hidden="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="atb col-4">
+                                                    <span class="atb-name">Khối lượng<span style="color: red"> *</span></span>
                                                     <div class="weight">
-                                                        <input type="text" id="productweight" name="productweight" class="atb-input input-group form-control shadow-none" placeholder="Nhập Khối lượng" >
+                                                        <input type="text" id="productweight" name="productweight" class="atb-input input-group form-control shadow-none" placeholder="Nhập Khối lượng" required>
                                                         <select name="weightunit" id="weightunit" class="weight-unit form-select" style="box-shadow: none;">
-                                                            <option value="1" class="weight-unit-item">g</option>
-                                                            <option value="2" class="weight-unit-item">kg</option>
+                                                            <option value="g" class="weight-unit-item">g</option>
+                                                            <option value="kg" class="weight-unit-item">kg</option>
                                                         </select>
-                                                        <span id="warningProductweight" class="warningText validateWarnning" hidden="true"></span>
+                                                        <span id="warningProductweight" class="warningText" hidden="true"></span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="atb col-4">
-                                                    <span class="atb-name defaultCursor">Phân loại</span>
+                                                    <span class="atb-name">Phân loại</span>
                                                     <select name="productcategory" id="productcategory" class="atb-input input-group form-control shadow-none category-select">
                                                         <c:forEach items="${listCategory}" var="category">
                                                             <option value="${category.getCategoryId()}" class="category-item">
@@ -147,29 +146,29 @@
                                         </div>
                                     </div>
                                     <div class="general-info__description" style="position: relative;">
-                                        <span class="atb-name defaultCursor">Mô tả</span>
+                                        <span class="atb-name">Mô tả</span>
                                         <textarea  maxlength="255" class="info-des form-control shadow-none" id="ifodesscription" name="ifodesscription" rows="4" cols="50" placeholder="Nhập Mô tả"></textarea>
-                                        <span id="warningInfoDes" class="warningTextArea validateWarnning" hidden="true"></span>
+                                        <span id="warningInfoDes" class="warningTextArea" hidden="true"></span>
                                     </div>
                                 </div>
                                 <div class="col-3 product-image">
-                                    <span class="defaultCursor">Ảnh (.jpg)<span style="color: red"> *</span></span>
-                                    <input type="file" id="img" name="img" class="img form-control shadow-none" >
+                                    <span>Ảnh (.png hoặc .jpg)<span style="color: red"> *</span></span>
+                                    <input onchange="readURL()" type="file" id="img" name="img" class="img form-control shadow-none" required>
                                     <img src="https://endlessicons.com/wp-content/uploads/2012/11/image-holder-icon.png" alt="Your image" id="img-chose" class="img-chose">
-                                    <span id="warningImg" class="warningImg validateWarnning" hidden="true"></span>
+                                    <span id="warningImg" class="warningImg" hidden="true"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="content__attributes-items" style="margin-left: 14px;">
-                        <div class="item-name defaultCursor">Thuộc tính bổ sung</div>
+                    <div class="content__attributes-items">
+                        <div class="item-name">Thuộc tính bổ sung</div>
                         <div class="item-content">
-                            <input type="hidden" id="numatb" name="numatb" value="0">
+                            <input type="hidden" id="numatb" name="numatb">
                             <table id="table-atb">
                                 <tr>
-                                    <th class="defaultCursor" style="width: 306px;">Tên thuộc tính</th>
-                                    <th class="defaultCursor" style="width: 305px;">Giá trị</th>
-                                    <th class="defaultCursor">Hành động</th>
+                                    <th style="width: 306px;">Tên thuộc tính</th>
+                                    <th style="width: 305px;">Giá trị</th>
+                                    <th>Hành động</th>
                                 </tr>
                                 <!-- <tr>
                                     <td><input type="text" placeholder="Nhập tên thuộc tính" class="attribute-name"></td>
@@ -186,15 +185,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content__attributes-items" style="margin-left: 14px;">
-                        <div class="item-name defaultCursor">Đơn vị quy đổi</div>
+                    <div class="content__attributes-items">
+                        <div class="item-name">Đơn vị quy đổi</div>
                         <div class="item-content">
-                            <input type="hidden" id="numunit" name="numunit" value="0">
+                            <input type="hidden" id="numunit" name="numunit">
                             <table id="table-unit">
                                 <tr>
-                                    <th class="defaultCursor" style="width: 306px;">Tên đơn vị</th>
-                                    <th class="defaultCursor" style="width: 305px;">Giá trị</th>
-                                    <th class="defaultCursor">Hành động</th>
+                                    <th style="width: 306px;">Tên đơn vị</th>
+                                    <th style="width: 305px;">Giá trị</th>
+                                    <th>Hành động</th>
                                 </tr>
                                 <!-- <tr>
                                     <td><input type="text" placeholder="Nhập tên đơn vị" class="unit-name"></td>
@@ -209,16 +208,12 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" id="attributeJSON" name="attributeJSON" value="">
                 </div>
             </div>
         </form>
     </div>
 </div>
-<div id="popupNotify" hidden>
-    <div id="popupNotifyBody">
-    </div>
-</div>
+
 
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

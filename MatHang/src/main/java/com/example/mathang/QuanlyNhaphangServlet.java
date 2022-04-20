@@ -1,7 +1,7 @@
 package com.example.mathang;
 
 import model.DonNhapHang;
-import dao.NhapHangDAO;
+import dao.NhaphangDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,10 +16,10 @@ import java.util.ArrayList;
 @WebServlet(name = "/QuanLyNhapHang", value = "/quan-ly-nhap-hang")
 public class QuanlyNhaphangServlet extends HttpServlet {
 
-    private NhapHangDAO nhaphangDAO;
+    private NhaphangDAO nhaphangDAO;
 
     public void init() {
-        nhaphangDAO = new NhapHangDAO();
+        nhaphangDAO = new NhaphangDAO();
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
