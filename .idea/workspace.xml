@@ -40,21 +40,37 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
+    <list default="true" id="4cb3dfdc-0c30-491e-a818-501335c11e8a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CapNhaDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CapNhaDonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/TaoDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/TaoDonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/XacNhanDaNhapKho.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/XacNhanDaNhapKho.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/XacNhanDaThanhToan.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/XacNhanDaThanhToan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/XacNhanDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/api/XacNhanDonNhapHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CapNhaDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CapNhaDonNhapHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CheckLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/CheckLoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/TaoDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/TaoDonNhapHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaNhapKho.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaNhapKho.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaThanhToan.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDaThanhToan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/api/XacNhanDonNhapHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaphangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaphangDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themnhacungcap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CheckLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CheckLoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaCungCapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaphangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaphangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/DonNhap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/DonNhap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +89,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="namnv" />
+        <entry key="$PROJECT_DIR$" value="fix1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -106,25 +130,100 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager">
-    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
-      <option name="adminPort" value="8005" />
-      <option name="contextPath" value="/MatHang" />
-      <option name="docBase" value="$PROJECT_DIR$/MatHang/src/main/webapp" />
-      <option name="envOptions" />
-      <option name="passParentEnvironmentVariables" value="true" />
-      <option name="port" value="8080" />
-      <option name="tomcatInfo">
-        <TomcatInfo>
-          <option name="name" value="Apache Tomcat/8.5.72" />
-          <option name="number" value="0" />
-          <option name="path" value="F:\Download\Tomcat8\apache-tomcat-8.5.72" />
-          <option name="version" value="8.5.72.0" />
-        </TomcatInfo>
-      </option>
-      <option name="vmOptions" value="" />
+    <configuration name="Tomcat 8.5.781" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.781" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="MatHang:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/MatHang_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="f594090b-d72f-4077-bcc4-72c3cd5befe2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53837" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="MatHang:war exploded" />
+        </option>
       </method>
     </configuration>
     <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
@@ -211,7 +310,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Thêm config DAO, chỉ cần extend ra là dùng được" />
@@ -219,44 +317,6 @@
     <MESSAGE value="them validation button submit" />
     <MESSAGE value="gan du, bi thieu check trung code mat hang" />
     <option name="LAST_COMMIT_MESSAGE" value="gan du, bi thieu check trung code mat hang" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650425195056">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1650425195056" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1650470341580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1650470341580" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,5 +332,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MatHang$Tomcat_8_5_781.ic" NAME="Tomcat 8.5.781 Coverage Results" MODIFIED="1650452728378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

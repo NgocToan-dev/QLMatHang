@@ -67,7 +67,14 @@
                 Đăng xuất
             </div>
         </menu>
-
+        <% if ((application.getAttribute("check") == "1") && (application.getAttribute("messages") != null)) {%>
+        <div id="popupNotify">
+            <div id="popupNotifyBody">
+                <%= application.getAttribute("messages")%>
+                <% application.setAttribute("check", "0"); %>
+            </div>
+        </div>
+        <% }%>
         <!--  phần nhét code -->
         <form id="formSua" action="<%= request.getContextPath() %>/sua-mat-hang" class="form__add-product" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="app__add-product">
