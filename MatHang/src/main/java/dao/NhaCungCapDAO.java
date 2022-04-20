@@ -2,6 +2,7 @@ package dao;
 
 import model.NhaCungCap;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,5 +28,27 @@ public class NhaCungCapDAO extends DAO {
             e.printStackTrace();
         }
         return list;
+    }
+
+
+    public boolean addNhaCungCap(NhaCungCap nhaCungCap){
+
+        boolean result = true;
+        String sql = "{call addNhaCungCap(?,?,?,?,?)}";
+
+        try {
+            CallableStatement cs = con.prepareCall(sql);
+            cs.setString(1,nhaCungCap.getCode());
+            cs.setString(2,nhaCungCap.getName());
+            cs.setString(3,nhaCungCap.getEmail());
+            cs.setString(4,nhaCungCap.getPhone());
+            cs.setString(5,nhaCungCap.getAddress());
+
+            cs.executeQuery();
+        }catch (Exception e){
+            result = false;
+            e.printStackTrace();
+        }
+        return result;
     }
 }

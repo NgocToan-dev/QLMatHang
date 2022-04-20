@@ -1,15 +1,17 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import jdk.nashorn.internal.objects.annotations.Constructor;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Getter
+@Setter
 @Builder
 @ToString
 @AllArgsConstructor
-public class NhaCungCap {
+@NoArgsConstructor
+public class NhaCungCap implements Serializable {
     private Long id;
     private String name;
     private String code;

@@ -85,7 +85,7 @@
             <div class="top container-fluid pl-3 pr-3 pt-2 pb-2" style="width: 99%">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex">
-                        <a class="pt-1" href="${pageContext.request.contextPath}/nhaphang/quanlynhaphang.jsp"
+                        <a class="pt-1" href="quan-ly-nhap-hang"
                            style="margin-right:10px;"><i
                                 class="fa-solid fa-arrow-left"></i></a>
                         <h4>Đơn nhập hàng</h4>
@@ -238,50 +238,50 @@
                 <button style="margin-right: 12px;" type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
             </div>
-
+            <form method="post" action="them-nha-cung-cap">
             <div class="modal-body">
                 <div class="row align-items-start">
                     <div class="col">
                         <div>
                             <label class="form-label">Mã nhà cung cấp</label>
-                            <input type="text" class="form-control" name="lorem" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="codeNCC">
                         </div>
                         <div>
                             <label class="form-label">Email</label>
-                            <input type="text" class="form-control" name="lorem" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="emailNCC">
                         </div>
                         <div>
                             <label class="form-label">Địa chỉ</label>
-                            <input type="text" class="form-control" name="lorem" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="addressNCC">
                         </div>
                     </div>
                     <div class="col">
                         <div>
                             <label class="form-label">Tên nhà cung cấp</label>
-                            <input type="text" class="form-control" name="lorem" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="nameNCC">
                         </div>
                         <div>
                             <label class="form-label">Số điện thoại</label>
-                            <input type="text" class="form-control" name="lorem" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="phoneNCC">
                         </div>
-                        <div>
-                            <label style="padding-bottom: 8px;" class="form-label">Khu vực</label><br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                       id="inlineRadio" value="option1" checked>
-                                <label class="form-check-label" for="inlineRadio1">Miền Bắc</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                       id="inlineRadio1" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Miền Trung</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                       id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Miền Nam</label>
-                            </div>
-                        </div>
+<%--                        <div>--%>
+<%--                            <label style="padding-bottom: 8px;" class="form-label">Khu vực</label><br>--%>
+<%--                            <div class="form-check form-check-inline">--%>
+<%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
+<%--                                       id="inlineRadio" value="option1" checked>--%>
+<%--                                <label class="form-check-label" for="inlineRadio1">Miền Bắc</label>--%>
+<%--                            </div>--%>
+<%--                            <div class="form-check form-check-inline">--%>
+<%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
+<%--                                       id="inlineRadio1" value="option2">--%>
+<%--                                <label class="form-check-label" for="inlineRadio2">Miền Trung</label>--%>
+<%--                            </div>--%>
+<%--                            <div class="form-check form-check-inline">--%>
+<%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
+<%--                                       id="inlineRadio2" value="option2">--%>
+<%--                                <label class="form-check-label" for="inlineRadio2">Miền Nam</label>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
                     </div>
                 </div>
                 <aside class="col-lg-2 col-sm-4">
@@ -290,12 +290,16 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Thêm</button>
+                <button type="submit" class="btn btn-primary">Thêm</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
-
+<div id="popupNotify">
+    <div id="popupNotifyBody">
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     var data = {
@@ -476,6 +480,8 @@
         total.style.display = 'block';
         rollBack.style.display = 'block';
     })
+
+    document.getElementById("idNCC").focus()
 
 </script>
 
