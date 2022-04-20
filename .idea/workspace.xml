@@ -40,26 +40,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SearchMHServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/trangchu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/LogoutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themnhacungcap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/trangchu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/trangchu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/LogoutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/User.class" afterDir="false" />
-    </list>
+    <list default="true" id="b44519b3-7231-4d08-b621-baef55f71b67" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +118,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="d5e02aae-3c0b-4a65-8f19-2a24a165697c" />
+        <option name="BASE_DIRECTORY_NAME" value="c86402fa-5270-46cc-9903-ad732336a6a0" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -145,7 +126,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54484" />
+        <option name="DEBUG_PORT" value="54927" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
