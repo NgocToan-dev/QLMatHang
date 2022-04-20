@@ -71,10 +71,10 @@
             <div class="top container-fluid p-3 d-flex justify-content-between" style="width: 99%">
                 <h4>Đơn nhập hàng</h4>
                 <div>
-                    <button type="button" title="Tạo đơn nhập hàng" class="btn btn-primary btn-save"><a
-                            href="${pageContext.request.contextPath}/nhaphang/taodonnhaphang.jsp"><i
-                            class="fa-solid fa-plus"></i></a>
-                    </button>
+                    <a href="tao-don-nhap-hang">
+                        <button type="button" title="Tạo đơn nhập hàng" class="btn btn-primary btn-save"><i
+                                class="fa-solid fa-plus"></i></button>
+                    </a>
                 </div>
             </div>
 
@@ -129,6 +129,7 @@
                             <th>Tổng tiền</th>
                             <th>Ngày tạo đơn</th>
                             <th>Ngày duyệt đơn</th>
+                            <th>Thao tác</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -167,6 +168,12 @@
                             </td>
                             <td><%=donNhapHang.getConfirmDate()%>
                             </td>
+                            <td style="text-align: center"><a
+                                    href="cap-nhat-don-nhap-hang?id=<%=donNhapHang.getDonId()%>">
+                                <button type="button" title="Xem đơn nhập hàng" class="btn btn-primary btn-save"><i
+                                        class="fa fa-eye"></i></button>
+                            </a>
+                            </td>
                         </tr>
                         <%} %>
 
@@ -177,7 +184,10 @@
         </div>
     </div>
 </div>
-
+<%--<div id="popupNotify">--%>
+<%--    <div id="popupNotifyBody">--%>
+<%--    </div>--%>
+<%--</div>--%>
 <script>
     // Auto focus vào input
     document.getElementById("search").focus();

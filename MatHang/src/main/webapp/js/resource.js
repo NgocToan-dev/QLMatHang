@@ -8,6 +8,8 @@ Resource.ValidateType = {
     MaxLength: 5,
     MinLength: 6,
     SpecialCharTextArea: 7,
+    FloatNumber: 8,
+    NegaNumber: 9,
 }
 
 
