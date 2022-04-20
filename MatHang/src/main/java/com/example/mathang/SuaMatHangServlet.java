@@ -59,7 +59,7 @@ public class SuaMatHangServlet extends HttpServlet {
         url = "/themmathang/suamathang.jsp";
         MatHangDAO matHangDAO = new MatHangDAO();
         int id = Integer.parseInt(request.getParameter("idEdit"));
-        System.out.println("Edit id: "+id);
+        System.out.println(id);
         MatHang matHang = matHangDAO.getMatHangById(id);
         System.out.println("Id mat hang: " + matHang.getId());
 
@@ -70,7 +70,7 @@ public class SuaMatHangServlet extends HttpServlet {
             System.out.println(categories.get(i).getName());
         }
 
-            // json to list
+        // json to list
         if(matHang.getAttribute()!=null && !matHang.getAttribute().equals("")) {
             String[] tokens = matHang.getAttribute().split("-");
             List<Atb> listAtb = createListAtbFromJsonString(tokens[0]);
@@ -82,7 +82,7 @@ public class SuaMatHangServlet extends HttpServlet {
             request.setAttribute("listAtb", listAtb);
             request.setAttribute("listUnit", listUnit);
         }
-            // gan vao request
+        // gan vao request
         request.setAttribute("listCategory", categories);
         request.setAttribute("matHang", matHang);
 
@@ -93,7 +93,6 @@ public class SuaMatHangServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
 
         // forward request and response to the view
@@ -141,7 +140,7 @@ public class SuaMatHangServlet extends HttpServlet {
     public void updateMatHang(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         Long id = Long.parseLong(request.getParameter("idMatHang"));
-        String code = toUTF8String(request.getParameter("productid"));
+        String code = request.getParameter("productid");
         String name = toUTF8String(request.getParameter("productname"));
         Part part = request.getPart("img");
         System.out.println(part.getContentType());
@@ -177,9 +176,7 @@ public class SuaMatHangServlet extends HttpServlet {
 
         }
 
-        //showFormThanhCong(id, request, response);
-
-        response.sendRedirect("/MatHang/sua-thanh-cong");
+        response.sendRedirect("/MatHang");
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {

@@ -24,6 +24,7 @@
         <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Đăng nhập</h1>
 
         <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Tên tài khoản(*)" required="true" autofocus="true">
+
         <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu(*)" required="true">
         <p style="color: red">${requestScope.error}</p>
         <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>

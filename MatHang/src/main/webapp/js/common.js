@@ -7,8 +7,7 @@ Common.ValidateInputBase = function (inputData, type) {
     var result = "";
 
     // lấy giá trị input
-    var inputText = "";
-    inputText = $(inputData).val();
+    var inputText = $(inputData).val();
 
     switch (type) {
         case resource.ValidateType.Required:

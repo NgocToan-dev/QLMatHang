@@ -74,7 +74,6 @@
                     <div class="content__name defaultCursor">Thêm mặt hàng</div>
                     <!-- <div class="btn-accept"> -->
                     <!-- <a href="" class="btn-accept-link">Xác nhận</a> -->
-                    <div id="successNotify"></div>
                     <button type="submit" class="btn-accept btn-accept-button btn-save">Xác nhận</button>
                     <!-- </div> -->
                 </div>
@@ -215,7 +214,7 @@
         </form>
     </div>
 </div>
-<div id="popupNotify" hidden>
+<div id="popupNotify" >
     <div id="popupNotifyBody">
     </div>
 </div>

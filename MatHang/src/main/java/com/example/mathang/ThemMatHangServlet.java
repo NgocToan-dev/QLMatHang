@@ -73,7 +73,7 @@ public class ThemMatHangServlet extends HttpServlet {
     public void insertMatHang(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
 
-        String code = toUTF8String(request.getParameter("productid"));
+        String code = request.getParameter("productid");
         String name = toUTF8String(request.getParameter("productname"));
         Part part = request.getPart("img");
         InputStream image = part.getInputStream();
@@ -97,7 +97,7 @@ public class ThemMatHangServlet extends HttpServlet {
 
         daoProcesssing(mathang);
 
-        response.sendRedirect("/MatHang/them-thanh-cong");
+        response.sendRedirect("/MatHang");
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {

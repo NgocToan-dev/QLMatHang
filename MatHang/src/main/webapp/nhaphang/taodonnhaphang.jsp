@@ -493,8 +493,6 @@
         rollBack.style.display = 'block';
     })
 
-    document.getElementById("idNCC").focus()
-
 </script>
 
 <script type="module" src="${pageContext.request.contextPath}/js/themnhacungcap.js"></script>

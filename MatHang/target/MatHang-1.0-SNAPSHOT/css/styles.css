@@ -297,7 +297,7 @@ tr{
 .info-des {
     display: block;
     border-radius: 5px;
-    width: calc(100% - 25px);
+    width: calc(100% - 5px);
     height: 136px;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -428,19 +428,3 @@ th {
     border-radius: 5px;
     right: 25px;
 }
-
-.disableInput:focus {
-    outline: none;
-    border-color: #ced4da;
-    cursor: default;
-}
-.disableInput:hover {
-    cursor: default;
-}
-
-.defaultCursor:hover {
-    cursor: default;
-}
-
-/*thong bao*/
-

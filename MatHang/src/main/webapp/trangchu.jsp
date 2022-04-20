@@ -43,7 +43,7 @@
             <div><i class="fa-brands fa-product-hunt fa-lg"></i>${sessionScope.account.name}</div>
         </li>
         <li class="sidebar-item nav-item">
-            <a class="nav-link d-flex">
+            <a href="" class="nav-link d-flex">
                 <div class="icon-item">
                     <i class="fa-solid fa-box-archive fa-lg"></i>
                 </div>
@@ -53,7 +53,7 @@
             </a>
         </li>
         <li class="sidebar-item nav-item">
-            <a class="nav-link d-flex">
+            <a href="" class="nav-link d-flex">
                 <div class="icon-item">
                     <i class="fa-solid fa-cart-plus fa-lg"></i>
                 </div>
@@ -65,7 +65,7 @@
     </nav>
     <div class="flex-grow-1">
         <menu class="d-flex justify-content-end">
-            <div id="logout-btn" class="d-flex align-items-center">
+            <div id="logout-btn" onclick="logOut()" class="d-flex align-items-center">
                 <i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i>
                 Đăng xuất
             </div>
@@ -77,10 +77,12 @@
             </div>
             <div class="background-main">
                 <div class="toolbar d-flex justify-content-between">
+                    <form action="search" method="post">
                     <div id="search" class="input-group mb-3">
-                        <input type="text" class="form-control shadow-none" placeholder="Tìm kiếm">
-                        <span class="input-group-text" title="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input name="txt" type="text" class="form-control shadow-none" placeholder="Tìm kiếm">
+                        <button type="submit" class="input-group-text" title="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
+                    </form>
                     <div>
                         <button type="button" title="Thêm" class="btn btn-primary btn-save"><i
                                 class="fa-solid fa-plus"></i></button>
@@ -109,7 +111,7 @@
                                 <td>${m.getWholesalePrice()}</td>
                                 <td>${m.getCreatedDate()}</td>
                                 <td class="table-function text-center">
-                                    <button type="button" title="Sửa" class="btn btn-save"><a href="edit?id='${m.code}'/>"></a><i class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" title="Sửa" class="btn btn-save"><a href=""></a><i class="fa-solid fa-pencil"></i></button>
                                     <button type="button" title="Xóa" class="btn btn-delete" onclick="doDelete(${m.getId()})"><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
@@ -126,9 +128,13 @@
 <!-- bootstrap -->
 <script>
     function doDelete(id){
-
-    if(confirm("Bạn có muốn xóa mặt hàng có ID ="+ id +"?")){
-            window.location = "delete?id"+id;
+    if(confirm("Bạn có muốn xóa mặt hàng có ID ="+ id +"?")) {
+        window.location = "delete?id=" + id;
+    }
+    }
+        function logOut(){
+        if(confirm("Bạn có muốn đăng xuất không ?")){
+            window.location.href = "/MatHang/"
         }
 
     }

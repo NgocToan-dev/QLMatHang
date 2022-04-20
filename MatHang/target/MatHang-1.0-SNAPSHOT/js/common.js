@@ -7,8 +7,7 @@ Common.ValidateInputBase = function (inputData, type) {
     var result = "";
 
     // lấy giá trị input
-    var inputText = "";
-    inputText = $(inputData).val();
+    var inputText = $(inputData).val();
 
     switch (type) {
         case resource.ValidateType.Required:
@@ -30,7 +29,7 @@ Common.ValidateInputBase = function (inputData, type) {
             }
             break;
         case resource.ValidateType.SpecialChar:
-            var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~]/;
+            var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
             if (format.test(inputText)) {
                 result = "Không để ký tự đặc biệt";
             }
@@ -39,19 +38,6 @@ Common.ValidateInputBase = function (inputData, type) {
             var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|<>\/?~]/;
             if (format.test(inputText)) {
                 result = "Không để ký tự đặc biệt";
-            }
-            break;
-        case resource.ValidateType.FloatNumber:
-
-            var format = /^\d+(?:\.\d{1,2})?$/;
-            if (!format.test(inputText)) {
-                result = "Nhập sai định dạng số: a.bc và >0";
-            }
-            break;
-        case resource.ValidateType.NegaNumber:
-            var value = parseFloat(inputText);
-            if (value < 0) {
-                result = "Không nhập số âm";
             }
             break;
         default:
@@ -74,11 +60,5 @@ Common.ValidateLength = function (inputData, minLength, maxLength) {
         }
         return "";
 }
-Common.showNotify = function (params) {
-        $("#popupNotifyBody").text(params);
-        $("#popupNotify").show("fast");
-        setTimeout(function() {
-            $("#popupNotify").hide("fast");
-        },2000);
-}
+
 export default Common;

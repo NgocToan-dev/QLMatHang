@@ -1,7 +1,5 @@
 package com.example.mathang;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,13 +19,11 @@ public class TaodonNhaphang extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
-
-        RequestDispatcher rd = request.getRequestDispatcher("nhaphang/taodonnhaphang.jsp");
-        try {
-            rd.forward(request, response);
-        } catch (ServletException e) {
-            throw new RuntimeException(e);
-        }
+        // Hello
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>" + message + "</h1>");
+        out.println("</body></html>");
     }
 
     public void destroy() {

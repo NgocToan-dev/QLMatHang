@@ -33,6 +33,7 @@ public class CheckLoginServlet extends HttpServlet {
         String p = request.getParameter("pass");
         UserDAO userDAO = new UserDAO();
         User user = userDAO.checkLogin(u, p);
+
         if (user == null) {
             request.setAttribute("error", "Nhập sai tài khoản hoặc mật khẩu");
             request.getRequestDispatcher("index.jsp").forward(request, response);
