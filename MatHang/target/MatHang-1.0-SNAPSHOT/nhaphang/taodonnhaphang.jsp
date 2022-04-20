@@ -238,31 +238,36 @@
                 <button style="margin-right: 12px;" type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
             </div>
-            <form method="post" action="them-nha-cung-cap">
+            <form method="post" action="them-nha-cung-cap" id="formThemNcc">
             <div class="modal-body">
                 <div class="row align-items-start">
                     <div class="col">
-                        <div>
-                            <label class="form-label">Mã nhà cung cấp</label>
-                            <input type="text" class="form-control" placeholder="" name="codeNCC">
+                        <div class="item" style="position: relative">
+                            <label class="form-label">Mã nhà cung cấp<span style="color: red"> *</span></label>
+                            <input type="text" class="form-control" placeholder="" name="codeNCC" id="codeNCC">
+                            <span id="warningCodeNcc" class="warningText" hidden="false" ></span>
                         </div>
-                        <div>
-                            <label class="form-label">Email</label>
-                            <input type="text" class="form-control" placeholder="" name="emailNCC">
+                        <div class="item" style="position: relative">
+                            <label class="form-label">Email<span style="color: red"> *</span></label>
+                            <input type="text" class="form-control" placeholder="" name="emailNCC" id="emailNCC">
+                            <span id="warningMailNcc" class="warningText" hidden="false"></span>
                         </div>
-                        <div>
-                            <label class="form-label">Địa chỉ</label>
-                            <input type="text" class="form-control" placeholder="" name="addressNCC">
+                        <div class="item" style="position: relative">
+                            <label class="form-label">Địa chỉ<span style="color: red"> *</span></label>
+                            <input type="text" class="form-control" placeholder="" name="addressNCC"id="addressNCC">
+                            <span id="warningAddressNcc" class="warningText" hidden="false"></span>
                         </div>
                     </div>
                     <div class="col">
-                        <div>
-                            <label class="form-label">Tên nhà cung cấp</label>
-                            <input type="text" class="form-control" placeholder="" name="nameNCC">
+                        <div class="item" style="position: relative">
+                            <label class="form-label">Tên nhà cung cấp<span style="color: red"> *</span></label>
+                            <input type="text" class="form-control" placeholder="" name="nameNCC"id="nameNCC">
+                            <span id="warningNameNcc" class="warningText" hidden="false"></span>
                         </div>
-                        <div>
-                            <label class="form-label">Số điện thoại</label>
-                            <input type="text" class="form-control" placeholder="" name="phoneNCC">
+                        <div class="item" style="position: relative">
+                            <label class="form-label">Số điện thoại<span style="color: red"> *</span></label>
+                            <input type="text" class="form-control" placeholder="" name="phoneNCC" id="phoneNCC">
+                            <span id="warningPhoneNcc" class="warningText" hidden="false"></span>
                         </div>
 <%--                        <div>--%>
 <%--                            <label style="padding-bottom: 8px;" class="form-label">Khu vực</label><br>--%>
@@ -301,6 +306,13 @@
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <script>
     var data = {
         provider: {},
@@ -485,10 +497,7 @@
 
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="module" src="${pageContext.request.contextPath}/js/themnhacungcap.js"></script>
 </body>
 
 </html>

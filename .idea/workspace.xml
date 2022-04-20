@@ -41,37 +41,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemNhaCungCapServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaodonNhaphang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaodonNhaphang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaCungCapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaCungCapDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/DonNhapHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/DonNhapHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/NhaCungCap.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/NhaCungCap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap$NhaCungCapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap$NhaCungCapBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaCungCapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/DonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/DonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap$NhaCungCapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap$NhaCungCapBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +56,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -117,12 +91,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ShowUsagesActions.previewPropertyKey": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.781" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.781" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
@@ -251,7 +226,7 @@
       <workItem from="1650161388324" duration="10635000" />
       <workItem from="1650174798921" duration="18002000" />
       <workItem from="1650434901532" duration="5740000" />
-      <workItem from="1650459878147" duration="809000" />
+      <workItem from="1650459878147" duration="7026000" />
     </task>
     <task id="LOCAL-00001" summary="Thêm config DAO, chỉ cần extend ra là dùng được">
       <created>1650164845233</created>
