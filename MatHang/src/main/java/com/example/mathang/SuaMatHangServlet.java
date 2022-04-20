@@ -59,7 +59,7 @@ public class SuaMatHangServlet extends HttpServlet {
         url = "/themmathang/suamathang.jsp";
         MatHangDAO matHangDAO = new MatHangDAO();
         int id = Integer.parseInt(request.getParameter("idEdit"));
-        System.out.println(id);
+        System.out.println("Edit id: "+id);
         MatHang matHang = matHangDAO.getMatHangById(id);
         System.out.println("Id mat hang: " + matHang.getId());
 
@@ -70,7 +70,7 @@ public class SuaMatHangServlet extends HttpServlet {
             System.out.println(categories.get(i).getName());
         }
 
-        // json to list
+            // json to list
         if(matHang.getAttribute()!=null && !matHang.getAttribute().equals("")) {
             String[] tokens = matHang.getAttribute().split("-");
             List<Atb> listAtb = createListAtbFromJsonString(tokens[0]);
@@ -82,7 +82,7 @@ public class SuaMatHangServlet extends HttpServlet {
             request.setAttribute("listAtb", listAtb);
             request.setAttribute("listUnit", listUnit);
         }
-        // gan vao request
+            // gan vao request
         request.setAttribute("listCategory", categories);
         request.setAttribute("matHang", matHang);
 
@@ -93,6 +93,7 @@ public class SuaMatHangServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
 
         // forward request and response to the view
@@ -176,7 +177,9 @@ public class SuaMatHangServlet extends HttpServlet {
 
         }
 
-        response.sendRedirect("/MatHang");
+        //showFormThanhCong(id, request, response);
+
+        response.sendRedirect("/MatHang/sua-thanh-cong");
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {

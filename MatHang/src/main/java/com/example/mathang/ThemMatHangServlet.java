@@ -97,7 +97,7 @@ public class ThemMatHangServlet extends HttpServlet {
 
         daoProcesssing(mathang);
 
-        response.sendRedirect("/MatHang");
+        response.sendRedirect("/MatHang/them-thanh-cong");
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {
