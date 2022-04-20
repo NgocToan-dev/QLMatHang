@@ -129,6 +129,7 @@
                             <th>Tổng tiền</th>
                             <th>Ngày tạo đơn</th>
                             <th>Ngày duyệt đơn</th>
+                            <th>Thao tác</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -166,6 +167,12 @@
                             <td><%=donNhapHang.getCreateDate()%>
                             </td>
                             <td><%=donNhapHang.getConfirmDate()%>
+                            </td>
+                            <td style="text-align: center"><a
+                                    href="cap-nhat-don-nhap-hang?id=<%=donNhapHang.getDonId()%>">
+                                <button type="button" title="Xem đơn nhập hàng" class="btn btn-primary btn-save"><i
+                                        class="fa fa-eye"></i></button>
+                            </a>
                             </td>
                         </tr>
                         <%} %>
