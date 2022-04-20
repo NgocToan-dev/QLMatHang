@@ -41,74 +41,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="merge proj">
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/CapNhaDonNhapHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/api/TaoDonNhapHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/api/XacNhanDaNhapKho.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/api/XacNhanDaThanhToan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/api/XacNhanDonNhapHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/DonNhap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/ResponseMessage.java" afterDir="false" />
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/BaoSuaThanhCongServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/BaoThemThanhCongServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/CheckLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/DanhSachMatHangServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/DeleteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaodonNhaphang.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemNhaCungCapServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/Atb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/ConversionUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themnhacungcap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/baosuathanhcong.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/baothemthanhcong.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/trangchu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/BaoSuaThanhCongServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/BaoThemThanhCongServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/CheckLoginServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/DanhSachMatHangServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/DeleteServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/LogoutServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/UserDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/model/Atb$AtbBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/model/Atb.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/model/ConversionUnit$ConversionUnitBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/model/ConversionUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MatHang/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MatHang_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MatHang_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/QuanlyNhaphangFilterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/QuanlyNhaphangFilterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/QuanlyNhaphangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/QuanlyNhaphangServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaodonNhaphang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaoDonNhapHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/mathang/MatHangApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/api/TimMatHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/nhacungcap/NhaCungCapApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/api/TimNhaCungCap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/MatHang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/MatHang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SuaMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SuaMatHangServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaoDonNhapHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaoDonNhapHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaCungCapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaCungCapDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaphangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhapHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/NhaCungCap.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/NhaCungCap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaodonNhaphang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/TaodonNhaphang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaCungCapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/NhaCungCapDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/DonNhapHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/DonNhapHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/MatHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/MatHang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/model/NhaCungCap.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/model/NhaCungCap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/resource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/quanlynhaphang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/QuanlyNhaphangFilterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/QuanlyNhaphangFilterServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/QuanlyNhaphangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/QuanlyNhaphangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/mathang/MatHangApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/nhacungcap/NhaCungCapApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaphangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaphangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/QuanlyNhaphangFilterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/QuanlyNhaphangFilterServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/QuanlyNhaphangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/QuanlyNhaphangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/mathang/MatHangApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/nhacungcap/NhaCungCapApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/DAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/MatHangDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/dao/NhaCungCapDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/DonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap$NhaCungCapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap$NhaCungCapBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/MatHang$MatHangBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/MatHang$MatHangBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/MatHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/MatHang.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/WEB-INF/classes/model/NhaCungCap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/js/themmathang.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/quanlynhaphang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/nhaphang/taodonnhaphang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/suamathang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/MatHang-1.0-SNAPSHOT/themmathang/themmathang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/TaodonNhaphang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/TaodonNhaphang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaCungCapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaCungCapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaphangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/NhaphangDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/DonNhapHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/DonNhapHang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap$NhaCungCapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap$NhaCungCapBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/MatHang$MatHangBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/MatHang$MatHangBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/MatHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/MatHang.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/model/NhaCungCap.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,12 +195,6 @@
       <recent name="com.example.mathang" />
     </key>
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
-  }
-}</component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.781" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.781" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
@@ -187,7 +202,7 @@
       <deployment>
         <artifact name="MatHang:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/MatHang_war_exploded" />
+            <option name="CONTEXT_PATH" value="/MatHang" />
           </settings>
         </artifact>
       </deployment>

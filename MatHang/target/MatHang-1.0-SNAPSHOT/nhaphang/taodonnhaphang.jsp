@@ -304,31 +304,31 @@
                 <button style="margin-right: 12px;" type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
             </div>
-            <form method="post" action="them-nha-cung-cap">
+            <form method="post" action="them-nha-cung-cap" id="formThemNcc">
             <div class="modal-body">
                 <div class="row align-items-start">
                     <div class="col">
                         <div>
                             <label class="form-label">Mã nhà cung cấp</label>
-                            <input type="text" class="form-control" placeholder="" name="codeNCC">
+                            <input type="text" class="form-control" placeholder="" name="codeNCC" id="codeNCC">
                         </div>
                         <div>
                             <label class="form-label">Email</label>
-                            <input type="text" class="form-control" placeholder="" name="emailNCC">
+                            <input type="text" class="form-control" placeholder="" name="emailNCC" id="emailNCC">
                         </div>
                         <div>
                             <label class="form-label">Địa chỉ</label>
-                            <input type="text" class="form-control" placeholder="" name="addressNCC">
+                            <input type="text" class="form-control" placeholder="" name="addressNCC"id="addressNCC">
                         </div>
                     </div>
                     <div class="col">
                         <div>
                             <label class="form-label">Tên nhà cung cấp</label>
-                            <input type="text" class="form-control" placeholder="" name="nameNCC">
+                            <input type="text" class="form-control" placeholder="" name="nameNCC"id="nameNCC">
                         </div>
                         <div>
                             <label class="form-label">Số điện thoại</label>
-                            <input type="text" class="form-control" placeholder="" name="phoneNCC">
+                            <input type="text" class="form-control" placeholder="" name="phoneNCC"id="phoneNCC">
                         </div>
 <%--                        <div>--%>
 <%--                            <label style="padding-bottom: 8px;" class="form-label">Khu vực</label><br>--%>

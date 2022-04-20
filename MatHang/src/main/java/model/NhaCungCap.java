@@ -1,6 +1,5 @@
 package model;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.*;
 
 import java.io.Serializable;

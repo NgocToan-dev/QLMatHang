@@ -1,7 +1,6 @@
 package com.example.mathang;
 
 import dao.NhaCungCapDAO;
-import dao.NhaphangDAO;
 import model.NhaCungCap;
 
 import javax.servlet.ServletException;
