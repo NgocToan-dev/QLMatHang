@@ -141,7 +141,7 @@ public class SuaMatHangServlet extends HttpServlet {
     public void updateMatHang(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         Long id = Long.parseLong(request.getParameter("idMatHang"));
-        String code = request.getParameter("productid");
+        String code = toUTF8String(request.getParameter("productid"));
         String name = toUTF8String(request.getParameter("productname"));
         Part part = request.getPart("img");
         System.out.println(part.getContentType());

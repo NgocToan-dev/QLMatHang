@@ -73,7 +73,7 @@ public class ThemMatHangServlet extends HttpServlet {
     public void insertMatHang(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
 
-        String code = request.getParameter("productid");
+        String code = toUTF8String(request.getParameter("productid"));
         String name = toUTF8String(request.getParameter("productname"));
         Part part = request.getPart("img");
         InputStream image = part.getInputStream();
