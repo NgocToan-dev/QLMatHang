@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class UserDAO extends DAO{
     public User checkLogin(String user, String pass){
 
-        String sql = "SELECT * FROM nhanvien WHERE name = ? AND nhanVienCode = ?";
+        String sql = "call check_login(?,?)";
         try{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, user);
@@ -21,7 +21,9 @@ public class UserDAO extends DAO{
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getString(6));
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8));
             }
         }catch (SQLException e){
         }

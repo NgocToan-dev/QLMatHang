@@ -199,7 +199,7 @@ public class MatHangDAO extends DAO{
     public void deleteMH(int id){
 
         try{
-            String sql = "delete from mathang where matHangID=?";
+            String sql = "call deleteMatHang(?)";
             PreparedStatement st = con.prepareStatement(sql);
             st.setInt(1,id);
             st.executeUpdate();
@@ -208,5 +208,27 @@ e.printStackTrace();
         }
     }
 
+    public List<MatHang> searchByName(String txtSearch){
+        List<MatHang> list = new ArrayList<>();
+        String sql = "call searchMatHang(?)";
 
+        try{
+            PreparedStatement st = con.prepareStatement(sql);
+            st.setString(1,"%"+txtSearch+"%");
+            ResultSet rs = st.executeQuery();
+            while(rs.next()){
+                MatHang m = new MatHang();
+                m.setId(rs.getLong("matHangID"));
+                m.setName(rs.getString("name"));
+                m.setCode(rs.getString("matHangCode"));
+                m.setRetailPrice(rs.getDouble("retailPrice"));
+                m.setWholesalePrice(rs.getDouble("wholesalePrice"));
+                m.setCreatedDate(rs.getDate("createdDate"));
+                list.add(m);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
 }
