@@ -15,6 +15,12 @@ function initEvent() {
 
     validateWhenSubmit();
     validateWhenSubmitUpdate();
+    showNotify();
+}
+function showNotify(){
+    setTimeout(function(){
+       $("#popupNotify").hide();
+    },3000);
 }
 
 function validateInput() {
@@ -92,11 +98,6 @@ function validateWhenSubmit(){
 
         if(result == ""){
             //Common.showNotify("Sửa thành công");
-            setTimeout(function(){
-                var n = (document).getElementById("successNotify")
-                n.innerText = "Thêm mới thành công";
-                return false;
-            }, 5000);
         }else{
             e.preventDefault();
         }

@@ -11,6 +11,7 @@ import model.MatHang;
 
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -94,7 +95,9 @@ public class SuaMatHangServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
+//        ServletContext sc = request.getServletContext();
+//        String htmlMessage = "";
+//        sc.setAttribute("messages", htmlMessage);
 
         // forward request and response to the view
         RequestDispatcher dispatcher
@@ -179,7 +182,13 @@ public class SuaMatHangServlet extends HttpServlet {
 
         //showFormThanhCong(id, request, response);
 
-        response.sendRedirect("/MatHang/sua-thanh-cong");
+        String htmlMessage = "Sửa thành công";
+        String check = "1";
+
+        ServletContext sc = request.getServletContext();
+        sc.setAttribute("messages", htmlMessage);
+        sc.setAttribute("check", check);
+        response.sendRedirect("/MatHang/sua-mat-hang?idEdit="+id);
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {

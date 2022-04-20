@@ -74,11 +74,4 @@ Common.ValidateLength = function (inputData, minLength, maxLength) {
         }
         return "";
 }
-Common.showNotify = function (params) {
-        $("#popupNotifyBody").text(params);
-        $("#popupNotify").show("fast");
-        setTimeout(function() {
-            $("#popupNotify").hide("fast");
-        },2000);
-}
 export default Common;

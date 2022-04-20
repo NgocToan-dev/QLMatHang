@@ -10,6 +10,7 @@ import model.ConversionUnit;
 import model.MatHang;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -64,6 +65,7 @@ public class ThemMatHangServlet extends HttpServlet {
             System.out.println(categories.get(i).getName());
         }
         request.setAttribute("listCategory", categories);
+
         // forward request and response to the view
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
@@ -97,7 +99,13 @@ public class ThemMatHangServlet extends HttpServlet {
 
         daoProcesssing(mathang);
 
-        response.sendRedirect("/MatHang/them-thanh-cong");
+        String htmlMessage = "Thêm thành công";
+        String check = "1";
+
+        ServletContext sc = request.getServletContext();
+        sc.setAttribute("messages", htmlMessage);
+        sc.setAttribute("check", check);
+        response.sendRedirect("/MatHang/them-mat-hang");
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {
