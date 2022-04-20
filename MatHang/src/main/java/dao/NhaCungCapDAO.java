@@ -2,7 +2,6 @@ package dao;
 
 import model.NhaCungCap;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -27,5 +26,22 @@ public class NhaCungCapDAO extends DAO {
             e.printStackTrace();
         }
         return list;
+    }
+
+    public NhaCungCap layNhaCungCap(Integer providerId) {
+        String sql = "select * from nhacungcap where nhanCungCapId = ?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, providerId);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return NhaCungCap.builder().id(rs.getLong(1))
+                        .name(rs.getString(2)).code(rs.getString(3)).email(rs.getString(4))
+                        .phone(rs.getString(5)).address(rs.getString(6)).build();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

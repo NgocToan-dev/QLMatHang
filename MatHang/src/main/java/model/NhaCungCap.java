@@ -16,4 +16,8 @@ public class NhaCungCap {
     private String email;
     private String phone;
     private String address;
+
+    public String get() {
+        return code + " - " + name;
+    }
 }

@@ -1,4 +1,4 @@
-package com.example.mathang.mathang;
+package com.example.mathang.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(value = "/search-product")
-public class MatHangApi extends HttpServlet {
+public class TimMatHang extends HttpServlet {
     private static final Gson gson = new GsonBuilder().create();
 
     @Override
