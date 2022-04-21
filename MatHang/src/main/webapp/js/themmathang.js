@@ -25,7 +25,7 @@ function showNotify(){
 
 function validateInput() {
     $("#productid").on('keyup focusout', function (e) {
-        validateProductID();
+        validateProductID($(this));
     });
     $("#productname").on('keyup focusout', function (e) {
         validateProductName($(this));

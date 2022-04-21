@@ -58,11 +58,12 @@ public class MatHangDAO extends DAO{
         return result;
     }
 
-    public void saveMatHang(MatHang matHang) {
+    public boolean saveMatHang(MatHang matHang) {
         //matHangID, matHangCode , name,
         // image, retailPrice,
         // wholesalePrice, description,
         // categoryID, attribute, calculateUnit, unit, weight
+        boolean check = true;
         String sql = "call addMatHang(?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -81,14 +82,17 @@ public class MatHangDAO extends DAO{
             ps.executeQuery();
         }catch(Exception e) {
             e.printStackTrace();
+            check = false;
         }
+        return check;
     }
 
-    public void updateMatHangWithoutImage(MatHang matHang) {
+    public boolean updateMatHangWithoutImage(MatHang matHang) {
         //matHangID, matHangCode , name,
         //retailPrice,
         // wholesalePrice, description,
         // categoryID, attribute, calculateUnit, unit, weight
+        boolean check = true;
         String sql = "call updateMatHangWithoutImage(?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -108,13 +112,16 @@ public class MatHangDAO extends DAO{
             System.out.println("Done update");
         }catch(Exception e) {
             e.printStackTrace();
+            check = false;
         }
+        return check;
     }
-    public void updateMatHangWithImage(MatHang matHang) {
+    public boolean updateMatHangWithImage(MatHang matHang) {
         //matHangID, matHangCode , name,
         // image, retailPrice,
         // wholesalePrice, description,
         // categoryID, attribute, calculateUnit, unit, weight
+        boolean check = true;
         String sql = "call updateMatHangWithImage(?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -134,7 +141,9 @@ public class MatHangDAO extends DAO{
             System.out.println("Done update");
         }catch(Exception e) {
             e.printStackTrace();
+            check = false;
         }
+        return check;
     }
 
     public List<MatHang> getListMatHang(){
