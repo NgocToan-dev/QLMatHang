@@ -1,24 +1,19 @@
 package model;
 
-import lombok.*;
-
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
 
 @Getter
-@Setter
 @Builder
 @ToString
 @AllArgsConstructor
-@NoArgsConstructor
-public class NhaCungCap implements Serializable {
+public class NhaCungCap {
     private Long id;
     private String name;
     private String code;
     private String email;
     private String phone;
     private String address;
-
-    public String get() {
-        return code + " - " + name;
-    }
 }

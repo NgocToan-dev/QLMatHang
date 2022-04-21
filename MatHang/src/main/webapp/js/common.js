@@ -7,8 +7,7 @@ Common.ValidateInputBase = function (inputData, type) {
     var result = "";
 
     // lấy giá trị input
-    var inputText = "";
-    inputText = $(inputData).val();
+    var inputText = $(inputData).val();
 
     switch (type) {
         case resource.ValidateType.Required:
@@ -73,5 +72,12 @@ Common.ValidateLength = function (inputData, minLength, maxLength) {
             return result;
         }
         return "";
+}
+Common.showNotify = function (params) {
+        $("#popupNotifyBody").text(params);
+        $("#popupNotify").show("fast");
+        setTimeout(function() {
+            $("#popupNotify").hide("fast");
+        },2000);
 }
 export default Common;

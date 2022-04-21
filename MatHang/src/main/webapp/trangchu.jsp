@@ -92,7 +92,7 @@
                     <table class="table table-borderless">
                         <thead class="sticky-top">
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col" hidden>ID</th>
                             <th scope="col">Mã mặt hàng</th>
                             <th scope="col">Tên mặt hàng</th>
                             <th scope="col">Gía bán lẻ</th>
@@ -104,7 +104,7 @@
                         <tbody>
                         <c:forEach items="${data}" var="m">
                             <tr>
-                                <td>${m.getId()}</td>
+                                <td hidden>${m.getId()}</td>
                                 <td>${m.getCode()}</td>
                                 <td >${m.getName()}</td>
                                 <td>${m.getRetailPrice()}</td>
@@ -112,7 +112,7 @@
                                 <td>${m.getCreatedDate()}</td>
                                 <td class="table-function text-center">
                                     <button type="button" title="Sửa" class="btn btn-save"><a href="edit?id='${m.code}'/>"></a><i class="fa-solid fa-pencil"></i></button>
-                                    <button type="button" title="Xóa" class="btn btn-delete" onclick="doDelete(${m.getId()})"><i class="fa-solid fa-trash"></i></button>
+                                    <button type="button" title="Xóa" class="btn btn-delete" onclick="doDelete(${m.getId()},'${m.getCode()}')"><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -127,17 +127,15 @@
 
 <!-- bootstrap -->
 <script>
-    function doDelete(id){
-        if(confirm("Bạn có muốn xóa mặt hàng có ID ="+ id +"?")) {
+    function doDelete(id,code){
+        if(confirm("Bạn có muốn xóa mặt hàng có mã mặt hàng ="+ code +"?")) {
             window.location = "delete?id=" + id;
         }
     }
     function logOut(){
         if(confirm("Bạn có muốn đăng xuất không ?")){
             window.location.href = "/MatHang/"
-
         }
-
     }
 </script>
 </body>

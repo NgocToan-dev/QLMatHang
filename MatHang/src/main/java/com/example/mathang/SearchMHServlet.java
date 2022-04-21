@@ -16,14 +16,14 @@ import java.util.List;
 @WebServlet(name="SearchServlet", urlPatterns ="/search")
 public class SearchMHServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String txtSearch = request.getParameter("txt");
-        MatHangDAO mh = new MatHangDAO();
-        List<MatHang> list = mh.searchByName(txtSearch);
-        request.setAttribute("data",list);
-        request.getRequestDispatcher("trangchu.jsp").forward(request,response);
+         response.setContentType("text/html;charset=UTF-8");
+         String txtSearch = request.getParameter("txt");
+         MatHangDAO mh = new MatHangDAO();
+         List<MatHang> list = mh.searchByName(txtSearch);
+         request.setAttribute("data",list);
+         request.getRequestDispatcher("trangchu.jsp").forward(request,response);
     }
 
 }

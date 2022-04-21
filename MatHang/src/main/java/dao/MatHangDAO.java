@@ -58,12 +58,11 @@ public class MatHangDAO extends DAO{
         return result;
     }
 
-    public boolean saveMatHang(MatHang matHang) {
+    public void saveMatHang(MatHang matHang) {
         //matHangID, matHangCode , name,
         // image, retailPrice,
         // wholesalePrice, description,
         // categoryID, attribute, calculateUnit, unit, weight
-        boolean check = true;
         String sql = "call addMatHang(?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -82,17 +81,14 @@ public class MatHangDAO extends DAO{
             ps.executeQuery();
         }catch(Exception e) {
             e.printStackTrace();
-            check = false;
         }
-        return check;
     }
 
-    public boolean updateMatHangWithoutImage(MatHang matHang) {
+    public void updateMatHangWithoutImage(MatHang matHang) {
         //matHangID, matHangCode , name,
         //retailPrice,
         // wholesalePrice, description,
         // categoryID, attribute, calculateUnit, unit, weight
-        boolean check = true;
         String sql = "call updateMatHangWithoutImage(?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -112,16 +108,13 @@ public class MatHangDAO extends DAO{
             System.out.println("Done update");
         }catch(Exception e) {
             e.printStackTrace();
-            check = false;
         }
-        return check;
     }
-    public boolean updateMatHangWithImage(MatHang matHang) {
+    public void updateMatHangWithImage(MatHang matHang) {
         //matHangID, matHangCode , name,
         // image, retailPrice,
         // wholesalePrice, description,
         // categoryID, attribute, calculateUnit, unit, weight
-        boolean check = true;
         String sql = "call updateMatHangWithImage(?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -141,9 +134,7 @@ public class MatHangDAO extends DAO{
             System.out.println("Done update");
         }catch(Exception e) {
             e.printStackTrace();
-            check = false;
         }
-        return check;
     }
 
     public List<MatHang> getListMatHang(){
@@ -166,7 +157,7 @@ public class MatHangDAO extends DAO{
 
     public List<MatHang> search(String key) {
         List<MatHang> list = new ArrayList<>();
-        String sql = "call getListMatHangAll(?)";
+        String sql = "call getListNhaCungCap(?)";
         if (con == null) return list;
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -174,7 +165,7 @@ public class MatHangDAO extends DAO{
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 MatHang mh = MatHang.builder().id(rs.getLong(1))
-                        .code(rs.getString(2)).name(rs.getString(3)).build();
+                        .name(rs.getString(2)).code(rs.getString(3)).build();
                 list.add(mh);
             }
         } catch (Exception e) {
@@ -240,6 +231,4 @@ public class MatHangDAO extends DAO{
         }
         return list;
     }
-
-
 }
