@@ -255,7 +255,7 @@
                     <%--                    <p id="paid" style="display:block">Đã thanh toán: 0đ</p>--%>
                     <%--                    <p id="rest" style="display:block">Còn phải trả: 52.000.000đ</p>--%>
                     <p></p>
-                    <button <%if(don.getHasPaid()){%>hidden<%}%> class="button btn-create p-1 mb-2"
+                    <button <%if(don.getHasPaid()){%>hidden<%}%> class="button btn-create p-2 mb-2"
                             id="confirm-payment">
                         Xác nhận thanh toán
                     </button>
@@ -272,7 +272,7 @@
                     <%--                    <p id="total" style="display:block">Tổng tiền: 52.000.000</p>--%>
                     <p></p>
 
-                    <button <%if(don.getHasReceived()){%>hidden<%}%> class="button btn-create p-1 mb-2"
+                    <button <%if(don.getHasReceived()){%>hidden<%}%> class="button btn-create p-2 mb-2"
                             id="confirm-import">
                         Xác nhận nhập kho
                     </button>
@@ -305,64 +305,65 @@
                         aria-label="Close"></button>
             </div>
             <form method="post" action="them-nha-cung-cap" id="formThemNcc">
-            <div class="modal-body">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="item" style="position: relative">
-                            <label class="form-label">Mã nhà cung cấp<span style="color: red"> *</span></label>
-                            <input type="text" class="form-control" placeholder="" name="codeNCC" id="codeNCC">
-                            <span id="warningCodeNcc" class="warningText" hidden="false" ></span>
+                <div class="modal-body">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div class="item" style="position: relative">
+                                <label class="form-label">Mã nhà cung cấp<span style="color: red"> *</span></label>
+                                <input type="text" class="form-control" placeholder="" name="codeNCC" id="codeNCC">
+                                <span id="warningCodeNcc" class="warningText" hidden="false"></span>
+                            </div>
+                            <div class="item" style="position: relative">
+                                <label class="form-label">Email<span style="color: red"> *</span></label>
+                                <input type="text" class="form-control" placeholder="" name="emailNCC" id="emailNCC">
+                                <span id="warningMailNcc" class="warningText" hidden="false"></span>
+                            </div>
+                            <div class="item" style="position: relative">
+                                <label class="form-label">Địa chỉ<span style="color: red"> *</span></label>
+                                <input type="text" class="form-control" placeholder="" name="addressNCC"
+                                       id="addressNCC">
+                                <span id="warningAddressNcc" class="warningText" hidden="false"></span>
+                            </div>
                         </div>
-                        <div class="item" style="position: relative">
-                            <label class="form-label">Email<span style="color: red"> *</span></label>
-                            <input type="text" class="form-control" placeholder="" name="emailNCC" id="emailNCC">
-                            <span id="warningMailNcc" class="warningText" hidden="false"></span>
-                        </div>
-                        <div class="item" style="position: relative">
-                            <label class="form-label">Địa chỉ<span style="color: red"> *</span></label>
-                            <input type="text" class="form-control" placeholder="" name="addressNCC"id="addressNCC">
-                            <span id="warningAddressNcc" class="warningText" hidden="false"></span>
+                        <div class="col">
+                            <div class="item" style="position: relative">
+                                <label class="form-label">Tên nhà cung cấp<span style="color: red"> *</span></label>
+                                <input type="text" class="form-control" placeholder="" name="nameNCC" id="nameNCC">
+                                <span id="warningNameNcc" class="warningText" hidden="false"></span>
+                            </div>
+                            <div class="item" style="position: relative">
+                                <label class="form-label">Số điện thoại<span style="color: red"> *</span></label>
+                                <input type="text" class="form-control" placeholder="" name="phoneNCC" id="phoneNCC">
+                                <span id="warningPhoneNcc" class="warningText" hidden="false"></span>
+                            </div>
+                            <%--                        <div>--%>
+                            <%--                            <label style="padding-bottom: 8px;" class="form-label">Khu vực</label><br>--%>
+                            <%--                            <div class="form-check form-check-inline">--%>
+                            <%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
+                            <%--                                       id="inlineRadio" value="option1" checked>--%>
+                            <%--                                <label class="form-check-label" for="inlineRadio1">Miền Bắc</label>--%>
+                            <%--                            </div>--%>
+                            <%--                            <div class="form-check form-check-inline">--%>
+                            <%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
+                            <%--                                       id="inlineRadio1" value="option2">--%>
+                            <%--                                <label class="form-check-label" for="inlineRadio2">Miền Trung</label>--%>
+                            <%--                            </div>--%>
+                            <%--                            <div class="form-check form-check-inline">--%>
+                            <%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
+                            <%--                                       id="inlineRadio2" value="option2">--%>
+                            <%--                                <label class="form-check-label" for="inlineRadio2">Miền Nam</label>--%>
+                            <%--                            </div>--%>
+                            <%--                        </div>--%>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="item" style="position: relative">
-                            <label class="form-label">Tên nhà cung cấp<span style="color: red"> *</span></label>
-                            <input type="text" class="form-control" placeholder="" name="nameNCC"id="nameNCC">
-                            <span id="warningNameNcc" class="warningText" hidden="false"></span>
-                        </div>
-                        <div class="item" style="position: relative">
-                            <label class="form-label">Số điện thoại<span style="color: red"> *</span></label>
-                            <input type="text" class="form-control" placeholder="" name="phoneNCC" id="phoneNCC">
-                            <span id="warningPhoneNcc" class="warningText" hidden="false"></span>
-                        </div>
-<%--                        <div>--%>
-<%--                            <label style="padding-bottom: 8px;" class="form-label">Khu vực</label><br>--%>
-<%--                            <div class="form-check form-check-inline">--%>
-<%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
-<%--                                       id="inlineRadio" value="option1" checked>--%>
-<%--                                <label class="form-check-label" for="inlineRadio1">Miền Bắc</label>--%>
-<%--                            </div>--%>
-<%--                            <div class="form-check form-check-inline">--%>
-<%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
-<%--                                       id="inlineRadio1" value="option2">--%>
-<%--                                <label class="form-check-label" for="inlineRadio2">Miền Trung</label>--%>
-<%--                            </div>--%>
-<%--                            <div class="form-check form-check-inline">--%>
-<%--                                <input class="form-check-input" type="radio" name="inlineRadioOptions"--%>
-<%--                                       id="inlineRadio2" value="option2">--%>
-<%--                                <label class="form-check-label" for="inlineRadio2">Miền Nam</label>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-                    </div>
+                    <aside class="col-lg-2 col-sm-4">
+
+                    </aside>
                 </div>
-                <aside class="col-lg-2 col-sm-4">
 
-                </aside>
-            </div>
-
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
             </form>
         </div>
     </div>
@@ -371,8 +372,43 @@
 <%--    <div id="popupNotifyBody">--%>
 <%--    </div>--%>
 <%--</div>--%>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="toast-success" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i style="color: #28a745; margin-right: 10px;" class="fa-solid fa-check"></i>
+            <strong class="me-auto" style="color: black">Thông báo</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast-body-success" style="color: black">
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="toast-failure" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i style="color: #dc3546; margin-right: 10px;" class="fa-solid fa-xmark"></i>
+            <strong class="me-auto" style="color: black">Thông báo</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast-body-failure" style="color: black">
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="module" src="${pageContext.request.contextPath}/js/themnhacungcap.js"></script>
 <script>
+    var toastSuccess = document.getElementById('toast-success')
+    var toastFailure = document.getElementById('toast-failure')
     var data = {
         providerId: -1,
         products: [],
@@ -568,8 +604,10 @@
             data: JSON.stringify(data),
             success: function (result) {
                 if (result.isSuccessful) {
-                    setShowMessageAferReload(result.message)
+                    setShowMessageAferReload(result.message, result.isSuccessful)
                     window.location.href = `/MatHang/cap-nhat-don-nhap-hang?id=\${result.id}`
+                } else {
+                    showError(result.message)
                 }
             }
         });
@@ -583,7 +621,7 @@
             dataType: 'json',
             data: {'id': $('#bill-id').val()},
             success: function (result) {
-                setShowMessageAferReload(result.message)
+                setShowMessageAferReload(result.message, result.isSuccessful)
             }
         });
     })
@@ -596,7 +634,7 @@
             dataType: 'json',
             data: {'id': $('#bill-id').val()},
             success: function (result) {
-                setShowMessageAferReload(result.message)
+                setShowMessageAferReload(result.message, result.isSuccessful)
             }
         });
     })
@@ -609,12 +647,13 @@
             dataType: 'json',
             data: {'id': $('#bill-id').val()},
             success: function (result) {
-                setShowMessageAferReload(result.message)
+                setShowMessageAferReload(result.message, result.isSuccessful)
             }
         });
     })
 
-    function setShowMessageAferReload(message) {
+    function setShowMessageAferReload(message, isSuccessful) {
+        sessionStorage.isSuccessful = isSuccessful
         sessionStorage.showMessage = 'true';
         sessionStorage.message = message;
         window.location.reload();
@@ -622,8 +661,12 @@
 
     function init() {
         if (sessionStorage.showMessage == 'true') {
-            sessionStorage.showMessage = 'false';
-            alert(sessionStorage.message);
+            sessionStorage.showMessage = 'false'
+            if (sessionStorage.isSuccessful == 'true') {
+                showSuccess(sessionStorage.message);
+            } else {
+                showError(sessionStorage.message);
+            }
         }
         searchProvider()
         searchProduct()
@@ -631,15 +674,21 @@
 
     init()
 
-    document.getElementById("idNCC").focus()
+    function showSuccess(message) {
+        const toast = new bootstrap.Toast(toastSuccess)
+        $("#toast-body-success").text(message)
+        toast.show()
+    }
+
+    function showError(message) {
+        const toast = new bootstrap.Toast(toastFailure)
+        $("#toast-body-failure").text(message)
+        toast.show()
+    }
+
+    // document.getElementById("idNCC").focus()
 
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script type="module" src="${pageContext.request.contextPath}/js/themnhacungcap.js"></script>
 </body>
 
 </html>
