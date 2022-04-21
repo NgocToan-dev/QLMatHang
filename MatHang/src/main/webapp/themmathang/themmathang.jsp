@@ -202,7 +202,7 @@
                             <table id="table-unit">
                                 <tr>
                                     <th class="defaultCursor" style="width: 306px;">Tên đơn vị</th>
-                                    <th class="defaultCursor" style="width: 305px;">Giá trị</th>
+                                    <th class="defaultCursor" style="width: 305px;">Số lượng</th>
                                     <th class="defaultCursor">Hành động</th>
                                 </tr>
                                 <!-- <tr>

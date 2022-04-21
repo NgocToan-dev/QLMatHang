@@ -97,15 +97,26 @@ public class ThemMatHangServlet extends HttpServlet {
                 wholesalePrice, unit, calculateUnit,
                 weight, description, category, attribute);
 
-        daoProcesssing(mathang);
+        boolean checkdao = daoProcesssing(mathang);
 
-        String htmlMessage = "Thêm thành công";
-        String check = "1";
+        if(checkdao){
+            String htmlMessage = "Mã mặt hàng đã tồn tại";
+            String check = "1";
 
-        ServletContext sc = request.getServletContext();
-        sc.setAttribute("messages", htmlMessage);
-        sc.setAttribute("check", check);
-        response.sendRedirect("/MatHang/them-mat-hang");
+            ServletContext sc = request.getServletContext();
+            sc.setAttribute("messages", htmlMessage);
+            sc.setAttribute("check", check);
+            response.sendRedirect("/MatHang/them-mat-hang");
+        }else {
+            String htmlMessage = "Thêm thành công";
+            String check = "1";
+
+            ServletContext sc = request.getServletContext();
+            sc.setAttribute("messages", htmlMessage);
+            sc.setAttribute("check", check);
+            response.sendRedirect("/MatHang/them-mat-hang");
+        }
+
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {
@@ -162,9 +173,10 @@ public class ThemMatHangServlet extends HttpServlet {
         return mathang;
     }
 
-    private void daoProcesssing(MatHang mathang) {
+    private boolean daoProcesssing(MatHang mathang) {
         MatHangDAO matHangDAO = new MatHangDAO();
-        matHangDAO.saveMatHang(mathang);
+        boolean check = matHangDAO.saveMatHang(mathang);
+        return check;
     }
 
     public String toUTF8String(String string){
