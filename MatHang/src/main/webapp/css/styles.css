@@ -28,11 +28,17 @@
 .sidebar-item:hover{
     background-color: #E7F1FF;
 }
+.sidebar-item.active{
+    background-color: #E7F1FF;
+}
 .sidebar-item{
     border-radius: 5px;
     padding: 5px 0;
 }
 .sidebar-item:hover div{
+    color: #2C80FE;
+}
+.sidebar-item.active div{
     color: #2C80FE;
 }
 .nav-link{

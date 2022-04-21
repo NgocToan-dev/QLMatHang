@@ -80,4 +80,24 @@ Common.showNotify = function (params) {
             $("#popupNotify").hide("fast");
         },2000);
 }
+Common.sidebarFunction= function()  {
+
+    $("#btnAdd").click(function () {
+        window.location.href = "them-mat-hang";
+    });
+    $(document).on('click', '.btn-save-table', function () {
+        var value = $(this).parent().parent().children().first().attr('value');
+        window.location.href = "sua-mat-hang?idEdit=" + value;
+    });
+    $(".sidebar-item").click(function () {
+        $(".sidebar-item").removeClass("active");
+        $(this).addClass("active");
+        var value = $(this).attr("value");
+        if (value == 0) {
+            window.location.href = "/MatHang";
+        } else if (value == 1) {
+            window.location.href = "/MatHang/quan-ly-nhap-hang";
+        }
+    });
+}
 export default Common;

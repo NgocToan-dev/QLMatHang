@@ -8,14 +8,15 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MatHangDAO extends DAO{
+public class MatHangDAO extends DAO {
 
-    public MatHangDAO () {
+    public MatHangDAO() {
         super();
     }
+
     List<Category> categories = null;
 
-    public MatHang getMatHangById(int matHangId){
+    public MatHang getMatHangById(int matHangId) {
 //        m.matHangID,m.matHangCode,m.name,m.image,
 //m.retailPrice,m.wholesalePrice,m.description,
 //m.categoryID,m.createdDate,m.calculateUnit,
@@ -26,8 +27,8 @@ public class MatHangDAO extends DAO{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, matHangId);
             ResultSet rs = ps.executeQuery();
-            if(rs.next()) {
-                result.setId(Long.parseLong(matHangId+""));
+            if (rs.next()) {
+                result.setId(Long.parseLong(matHangId + ""));
                 result.setCode(rs.getString("matHangCode"));
                 result.setName(rs.getString("name"));
                 result.setImage(rs.getBlob("image").getBinaryStream());
@@ -39,8 +40,8 @@ public class MatHangDAO extends DAO{
                 CategoryDAO categoryDAO = new CategoryDAO();
                 categories = categoryDAO.getListCategory();
 
-                for(int i = 0; i < categories.size(); i++) {
-                    if(categories.get(i).getCategoryId() == categoryId){
+                for (int i = 0; i < categories.size(); i++) {
+                    if (categories.get(i).getCategoryId() == categoryId) {
                         category = categories.get(i);
                     }
                 }
@@ -51,7 +52,7 @@ public class MatHangDAO extends DAO{
                 result.setWeight(rs.getFloat("weight"));
                 result.setAttribute(rs.getString("attribute"));
             }
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println(result.getName());
@@ -79,7 +80,7 @@ public class MatHangDAO extends DAO{
             ps.setInt(11, matHang.getUnit());
             ps.setFloat(12, matHang.getWeight());
             ps.executeQuery();
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -92,7 +93,7 @@ public class MatHangDAO extends DAO{
         String sql = "call updateMatHangWithoutImage(?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, Integer.parseInt(matHang.getId()+""));
+            ps.setInt(1, Integer.parseInt(matHang.getId() + ""));
             ps.setString(2, matHang.getCode());
             ps.setString(3, matHang.getName());
 //            ps.setBlob(4, matHang.getImage());
@@ -106,10 +107,11 @@ public class MatHangDAO extends DAO{
             ps.setFloat(11, matHang.getWeight());
             ps.executeQuery();
             System.out.println("Done update");
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     public void updateMatHangWithImage(MatHang matHang) {
         //matHangID, matHangCode , name,
         // image, retailPrice,
@@ -118,7 +120,7 @@ public class MatHangDAO extends DAO{
         String sql = "call updateMatHangWithImage(?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, Integer.parseInt(matHang.getId()+""));
+            ps.setInt(1, Integer.parseInt(matHang.getId() + ""));
             ps.setString(2, matHang.getCode());
             ps.setString(3, matHang.getName());
             ps.setBlob(4, matHang.getImage());
@@ -132,12 +134,12 @@ public class MatHangDAO extends DAO{
             ps.setFloat(12, matHang.getWeight());
             ps.executeQuery();
             System.out.println("Done update");
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public List<MatHang> getListMatHang(){
+    public List<MatHang> getListMatHang() {
         List<MatHang> arrayList = new ArrayList<>();
         String sql = "call getListMatHang(?)";
         MatHang mh = new MatHang();
@@ -145,11 +147,11 @@ public class MatHangDAO extends DAO{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, 1);
             ResultSet rs = ps.executeQuery();
-            if(rs.next()) {
+            if (rs.next()) {
                 mh.setName(rs.getString("name"));
                 arrayList.add(mh);
             }
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return arrayList;
@@ -174,13 +176,13 @@ public class MatHangDAO extends DAO{
         return list;
     }
 
-    public List<MatHang> getall(){
+    public List<MatHang> getall() {
         List<MatHang> list = new ArrayList<>();
-        String sql="SELECT * from mathang ";
-        try{
+        String sql = "SELECT * from mathang ";
+        try {
             PreparedStatement st = con.prepareStatement(sql);
             ResultSet rs = st.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 MatHang m = new MatHang();
                 m.setId(rs.getLong("matHangID"));
                 m.setName(rs.getString("name"));
@@ -190,33 +192,33 @@ public class MatHangDAO extends DAO{
                 m.setCreatedDate(rs.getDate("createdDate"));
                 list.add(m);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return list;
     }
 
-    public void deleteMH(int id){
+    public void deleteMH(int id) {
 
-        try{
+        try {
             String sql = "call deleteMatHang(?)";
             PreparedStatement st = con.prepareStatement(sql);
-            st.setInt(1,id);
+            st.setInt(1, id);
             st.executeUpdate();
-        }catch (Exception e){
-e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    public List<MatHang> searchByName(String txtSearch){
+    public List<MatHang> searchByName(String txtSearch) {
         List<MatHang> list = new ArrayList<>();
         String sql = "call searchMatHang(?)";
 
-        try{
+        try {
             PreparedStatement st = con.prepareStatement(sql);
-            st.setString(1,"%"+txtSearch+"%");
+            st.setString(1, "%" + txtSearch + "%");
             ResultSet rs = st.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 MatHang m = new MatHang();
                 m.setId(rs.getLong("matHangID"));
                 m.setName(rs.getString("name"));
@@ -226,7 +228,7 @@ e.printStackTrace();
                 m.setCreatedDate(rs.getDate("createdDate"));
                 list.add(m);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return list;

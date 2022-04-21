@@ -37,25 +37,25 @@
         <li class="nav-item logo">
             <div><i class="fa-brands fa-product-hunt fa-lg"></i>Nhóm 5</div>
         </li>
-        <li class="sidebar-item nav-item">
-            <a class="nav-link d-flex">
+        <li class="sidebar-item nav-item" value="0">
+            <div class="nav-link d-flex">
                 <div class="icon-item">
                     <i class="fa-solid fa-box-archive fa-lg"></i>
                 </div>
                 <div>
                     Quản lý mặt hàng
                 </div>
-            </a>
+            </div>
         </li>
-        <li class="sidebar-item nav-item">
-            <a class="nav-link d-flex">
+        <li class="sidebar-item nav-item active" value="1">
+            <div class="nav-link d-flex">
                 <div class="icon-item">
                     <i class="fa-solid fa-cart-plus fa-lg"></i>
                 </div>
                 <div>
                     Nhập hàng
                 </div>
-            </a>
+            </div>
         </li>
     </nav>
     <div class="flex-grow-1">
@@ -184,6 +184,28 @@
 <script>
     // Auto focus vào input
     document.getElementById("search").focus();
+
+    sidebarFunction();
+    function sidebarFunction() {
+
+        $("#btnAdd").click(function () {
+            window.location.href = "them-mat-hang";
+        });
+        $(document).on('click', '.btn-save-table', function () {
+            var value = $(this).parent().parent().children().first().attr('value');
+            window.location.href = "sua-mat-hang?idEdit=" + value;
+        });
+        $(".sidebar-item").click(function () {
+            $(".sidebar-item").removeClass("active");
+            $(this).addClass("active");
+            var value = $(this).attr("value");
+            if (value == 0) {
+                window.location.href = "/MatHang";
+            } else if (value == 1) {
+                window.location.href = "/MatHang/quan-ly-nhap-hang";
+            }
+        });
+    }
 
 </script>
 

@@ -14,7 +14,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix ="c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,25 +42,25 @@
         <li class="nav-item logo">
             <div><i class="fa-brands fa-product-hunt fa-lg"></i>${sessionScope.account.name}</div>
         </li>
-        <li class="sidebar-item nav-item">
-            <a href="" class="nav-link d-flex">
+        <li class="sidebar-item nav-item active" value="0">
+            <div class="nav-link d-flex">
                 <div class="icon-item">
                     <i class="fa-solid fa-box-archive fa-lg"></i>
                 </div>
                 <div>
                     Quản lý mặt hàng
                 </div>
-            </a>
+            </div>
         </li>
-        <li class="sidebar-item nav-item">
-            <a href="" class="nav-link d-flex">
+        <li class="sidebar-item nav-item" value="1">
+            <div class="nav-link d-flex">
                 <div class="icon-item">
                     <i class="fa-solid fa-cart-plus fa-lg"></i>
                 </div>
                 <div>
                     Nhập hàng
                 </div>
-            </a>
+            </div>
         </li>
     </nav>
     <div class="flex-grow-1">
@@ -78,13 +78,14 @@
             <div class="background-main">
                 <div class="toolbar d-flex justify-content-between">
                     <form action="search" method="post">
-                    <div id="search" class="input-group mb-3">
-                        <input name="txt" type="text" class="form-control shadow-none" placeholder="Tìm kiếm">
-                        <button type="submit" class="input-group-text" title="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
+                        <div id="search" class="input-group mb-3">
+                            <input name="txt" type="text" class="form-control shadow-none" placeholder="Tìm kiếm">
+                            <button type="submit" class="input-group-text" title="Tìm kiếm"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
                     </form>
                     <div>
-                        <button type="button" title="Thêm" class="btn btn-primary btn-save"><i
+                        <button type="button" title="Thêm" id="btnAdd" class="btn btn-primary btn-save"><i
                                 class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
@@ -92,27 +93,28 @@
                     <table class="table table-borderless">
                         <thead class="sticky-top">
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Mã mặt hàng</th>
                             <th scope="col">Tên mặt hàng</th>
                             <th scope="col">Gía bán lẻ</th>
                             <th scope="col">Gía bán sỉ</th>
                             <th scope="col">Ngày</th>
-                            <th class="table-function" ></th>
+                            <th class="table-function"></th>
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${data}" var="m">
                             <tr>
-                                <td>${m.getId()}</td>
+                                <td hidden value="${m.getId()}"></td>
                                 <td>${m.getCode()}</td>
-                                <td >${m.getName()}</td>
+                                <td>${m.getName()}</td>
                                 <td>${m.getRetailPrice()}</td>
                                 <td>${m.getWholesalePrice()}</td>
                                 <td>${m.getCreatedDate()}</td>
                                 <td class="table-function text-center">
-                                    <button type="button" title="Sửa" class="btn btn-save"><a href=""></a><i class="fa-solid fa-pencil"></i></button>
-                                    <button type="button" title="Xóa" class="btn btn-delete" onclick="doDelete(${m.getId()})"><i class="fa-solid fa-trash"></i></button>
+                                    <button type="button" title="Sửa" class="btn btn-save btn-save-table"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" title="Xóa" class="btn btn-delete"
+                                            onclick="doDelete(${m.getId()})"><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -125,19 +127,24 @@
 </div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- bootstrap -->
 <script>
-    function doDelete(id){
-    if(confirm("Bạn có muốn xóa mặt hàng có ID ="+ id +"?")) {
-        window.location = "delete?id=" + id;
+    sidebarFunction();
+
+
+    function doDelete(id) {
+        if (confirm("Bạn có muốn xóa mặt hàng có ID =" + id + "?")) {
+            window.location = "delete?id=" + id;
+        }
     }
-    }
-        function logOut(){
-        if(confirm("Bạn có muốn đăng xuất không ?")){
+
+    function logOut() {
+        if (confirm("Bạn có muốn đăng xuất không ?")) {
             window.location.href = "/MatHang/"
         }
-
     }
+
 </script>
 </body>
 
