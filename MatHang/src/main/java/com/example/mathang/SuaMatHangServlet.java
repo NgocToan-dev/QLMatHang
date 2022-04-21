@@ -164,31 +164,43 @@ public class SuaMatHangServlet extends HttpServlet {
         MatHang mathang;
         InputStream is = part.getInputStream();
         System.out.println("available : "+is.available());
+        boolean checkdao = true;
         if(is.available() != 0) {
             System.out.println("Include image");
             InputStream image = part.getInputStream();
             mathang = buildMatHang(id, code, name, image, retailPrice,
                     wholesalePrice, unit, calculateUnit,
                     weight, description, category, attribute);
-            daoUpdateWithImage(mathang);
+            checkdao = daoUpdateWithImage(mathang);
         }else{
             System.out.println("Not include image");
             mathang = buildMatHangWithoutImage(id, code, name, retailPrice,
                     wholesalePrice, unit, calculateUnit,
                     weight, description, category, attribute);
-            daoUpdateWithoutImage(mathang);
+            checkdao = daoUpdateWithoutImage(mathang);
 
         }
 
-        //showFormThanhCong(id, request, response);
+        if(checkdao) {
+            String htmlMessage = "Sửa thành công";
+            String check = "1";
 
-        String htmlMessage = "Sửa thành công";
-        String check = "1";
+            ServletContext sc = request.getServletContext();
+            sc.setAttribute("messages", htmlMessage);
+            sc.setAttribute("check", check);
+            response.sendRedirect("/MatHang/sua-mat-hang?idEdit="+id);
+        }else {
+            String htmlMessage = "Mã mặt hàng đã tồn tại";
+            String check = "1";
 
-        ServletContext sc = request.getServletContext();
-        sc.setAttribute("messages", htmlMessage);
-        sc.setAttribute("check", check);
-        response.sendRedirect("/MatHang/sua-mat-hang?idEdit="+id);
+            ServletContext sc = request.getServletContext();
+            sc.setAttribute("messages", htmlMessage);
+            sc.setAttribute("check", check);
+            response.sendRedirect("/MatHang/sua-mat-hang?idEdit="+id);
+        }
+
+
+
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {
@@ -265,14 +277,16 @@ public class SuaMatHangServlet extends HttpServlet {
         return mathang;
     }
 
-    private void daoUpdateWithImage(MatHang mathang) {
+    private boolean daoUpdateWithImage(MatHang mathang) {
         MatHangDAO matHangDAO = new MatHangDAO();
-        matHangDAO.updateMatHangWithImage(mathang);
+        boolean check = matHangDAO.updateMatHangWithImage(mathang);
+        return check;
     }
 
-    private void daoUpdateWithoutImage(MatHang mathang) {
+    private boolean daoUpdateWithoutImage(MatHang mathang) {
         MatHangDAO matHangDAO = new MatHangDAO();
-        matHangDAO.updateMatHangWithoutImage(mathang);
+        boolean check = matHangDAO.updateMatHangWithoutImage(mathang);
+        return check;
     }
 
     public String toUTF8String(String string){

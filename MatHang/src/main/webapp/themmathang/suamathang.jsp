@@ -164,7 +164,16 @@
                                 <div class="col-3 product-image">
                                     <span class="defaultCursor">Ảnh (.jpg)</span>
                                     <input type="file" id="img" name="img" class="img form-control shadow-none">
-                                    <img src="data:image/png;base64,${imageBase64}" alt="Your image" id="img-chose" class="img-chose">
+                                    <img src="data:image/png;base64,${imageBase64}" style="white-space:pre;" alt="Hình ảnh bị lỗi hoặc đã bị xóa
+
+
+
+
+
+
+
+
+                                                                " id="img-chose" class="img-chose">
                                     <span id="warningImg" class="warningImg" hidden="true"></span>
                                 </div>
                             </div>
@@ -216,7 +225,7 @@
                             <table id="table-unit">
                                 <tr>
                                     <th class="defaultCursor" style="width: 306px;">Tên đơn vị</th>
-                                    <th class="defaultCursor" style="width: 305px;">Giá trị</th>
+                                    <th class="defaultCursor" style="width: 305px;">Số lượng</th>
                                     <th class="defaultCursor">Hành động</th>
                                 </tr>
                                 <c:forEach var="unit" items="${listUnit}" varStatus="theCount">
