@@ -204,7 +204,7 @@ public class MatHangDAO extends DAO{
             st.setInt(1,id);
             st.executeUpdate();
         }catch (Exception e){
-e.printStackTrace();
+            e.printStackTrace();
         }
     }
 

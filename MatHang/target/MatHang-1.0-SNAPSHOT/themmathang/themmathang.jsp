@@ -67,6 +67,15 @@
                 Đăng xuất
             </div>
         </menu>
+        <% if ((application.getAttribute("check") == "1") && (application.getAttribute("messages") != null)) {%>
+        <div id="popupNotify">
+            <div id="popupNotifyBody">
+                <%= application.getAttribute("messages")%>
+                <% application.setAttribute("check", "0"); %>
+            </div>
+        </div>
+        <% }%>
+
         <!--  phần nhét code -->
         <form action="" class="form__add-product">
             <div class="app__add-product">
