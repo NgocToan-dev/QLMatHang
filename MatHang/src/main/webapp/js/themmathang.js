@@ -14,42 +14,224 @@ function initEvent() {
     deleteUnit();
 
     validateWhenSubmit();
+    validateWhenSubmitUpdate();
+    showNotify();
+}
+function showNotify(){
+    setTimeout(function(){
+       $("#popupNotify").hide();
+    },3000);
 }
 
 function validateInput() {
-    validateProductID();
+    $("#productid").on('keyup focusout', function (e) {
+        validateProductID($(this));
+    });
     $("#productname").on('keyup focusout', function (e) {
         validateProductName($(this));
     });
-
-    validateProductRetailPrice();
-    validateProductWholesaleprice();
-    validateProductUnit();
-    validateStock();
-    validateProductweight();
-    validateImageFile();
+    $("#productretailprice").on('keyup focusout', function (e) {
+        validateProductRetailPrice($(this));
+    });
+    $("#productwholesaleprice").on('keyup focusout', function (e) {
+        validateProductWholesaleprice($(this));
+    });
+    $("#productunit").on('keyup focusout', function (e) {
+        validateProductUnit($(this));
+    });
+    // $("#stock").on('keyup focusout', function (e) {
+    //     validateStock($(this));
+    // });
+    $("#productweight").on('keyup focusout', function (e) {
+        validateProductweight($(this));
+    });
+    //$("#img").on('change', function (e) {
+        validateImageFile();
+    //});
     $("#ifodesscription").on('keyup focusout', function (e) {
         validateDescription($(this));
     });
     validateTableAtb();
+    validateTableUnit();
 }
 
 function validateWhenSubmit(){
     $("#formThem").submit(function (e){
         var result = "";
-        result = validateDescription($("#ifodesscription"));
+        result = validateProductID($("#productid"));
         if(result == ""){
             result = validateProductName($("#productname"));
         }
-        // thêm phần check validate các trường
+        if(result == ""){
+            result = validateProductRetailPrice($("#productretailprice"));
+        }
+        if(result == ""){
+            result = validateProductWholesaleprice($("#productwholesaleprice"));
+        }
+        if(result == ""){
+            result = validateProductUnit($("#productunit"));
+        }
+        if(result == ""){
+            result = validateProductweight($("#productweight"));
+        }
+        if(result == ""){
+            result = validateDescription($("#ifodesscription"));
+        }
+        if(result == ""){
+            var url = $("#img").val();
+            var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+            if (ext.length > 0 && (ext == "jpg"))
+            {
+                $("#warningImg").attr("hidden", true);
+            } else if(ext.length <= 0) {
+                $("#warningImg").text("Không hợp lệ");
+                result = "Không hợp lệ";
+                $("#warningImg").attr("hidden", false);
+            }
+        }
+        if(result == ""){
+            result = validateTableAtbWhenSubmit();
+        }
+        if(result == ""){
+            result = validateTableUnitWhenSubmit();
+        }
 
         if(result == ""){
-            Common.showNotify("Thêm thành công");
+            //Common.showNotify("Sửa thành công");
         }else{
             e.preventDefault();
         }
     })
 }
+
+function validateWhenSubmitUpdate(){
+    $("#formSua").submit(function (e){
+        var result = "";
+        result = validateProductID($("#productid"));
+        if(result == ""){
+            result = validateProductName($("#productname"));
+        }
+        if(result == ""){
+            result = validateProductRetailPrice($("#productretailprice"));
+        }
+        if(result == ""){
+            result = validateProductWholesaleprice($("#productwholesaleprice"));
+        }
+        if(result == ""){
+            result = validateProductUnit($("#productunit"));
+        }
+        if(result == ""){
+            result = validateProductweight($("#productweight"));
+        }
+        if(result == ""){
+            result = validateDescription($("#ifodesscription"));
+        }
+        if(result == ""){
+            var url = $("#img").val();
+            var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+            if (ext.length > 0 && (ext == "jpg"))
+            {
+                $("#warningImg").attr("hidden", true);
+            } else if(ext.length > 0) {
+                $("#warningImg").text("Không hợp lệ");
+                result = "Không hợp lệ";
+                $("#warningImg").attr("hidden", false);
+            }
+        }
+        if(result == ""){
+            result = validateTableAtbWhenSubmit();
+        }
+        if(result == ""){
+            result = validateTableUnitWhenSubmit();
+        }
+
+        if(result == ""){
+            setTimeout(function(){
+                var n = (document).getElementById("successNotify")
+                n.innerText = "Thêm mới thành công";
+                return false;
+            }, 5000);
+        }else{
+            e.preventDefault();
+        }
+    })
+}
+
+function validateTableUnitWhenSubmit(){
+    var numberRow = (document).getElementById("numunit");
+    var numRowInt = parseInt(numberRow.getAttribute("value"), 10);
+    var result = "";
+    for(let i = 1; i <= numRowInt; i++) {
+            result = Common.ValidateInputBase($("#unitName"+i), Resource.ValidateType.Required);
+            if (result == "") {
+                result = Common.ValidateInputBase($("#unitName"+i), Resource.ValidateType.SpecialChar)
+            }
+            if (result == "") {
+                result = Common.ValidateLength($("#unitName"+i), 0, 40);
+            }
+            if (result == "") {
+                $("#warningUnitName"+i).attr("hidden", true);
+            } else {
+                $("#warningUnitName"+i).text(result);
+                $("#warningUnitName"+i).attr("hidden", false);
+            }
+            var result = "";
+            result = Common.ValidateInputBase($("#unitValue"+i), Resource.ValidateType.Required);
+            if (result == "") {
+                result = Common.ValidateInputBase($("#unitValue"+i), Resource.ValidateType.FloatNumber)
+            }
+            if (result == "") {
+                result = Common.ValidateInputBase($("#unitValue"+i), Resource.ValidateType.SpecialChar)
+            }
+            if (result == "") {
+                result = Common.ValidateLength($("#unitValue"+i), 0, 15);
+            }
+            if (result == "") {
+                $("#warningUnitValue"+i).attr("hidden", true);
+            } else {
+                $("#warningUnitValue"+i).text(result);
+                $("#warningUnitValue"+i).attr("hidden", false);
+            }
+    }
+    return result;
+
+}
+
+function validateTableAtbWhenSubmit(){
+    var numberRow = (document).getElementById("numatb");
+    var numRowInt = parseInt(numberRow.getAttribute("value"), 10);
+    var result = "";
+    for(let i = 1; i <= numRowInt; i++) {
+            result = Common.ValidateInputBase($("#atbName"+i), Resource.ValidateType.Required);
+            if (result == "") {
+                result = Common.ValidateInputBase($("#atbName"+i), Resource.ValidateType.SpecialChar)
+            }
+            if (result == "") {
+                result = Common.ValidateLength($("#atbName"+i), 0, 40);
+            }
+            if (result == "") {
+                $("#warningAtbName"+i).attr("hidden", true);
+            } else {
+                $("#warningAtbName"+i).text(result);
+                $("#warningAtbName"+i).attr("hidden", false);
+            }
+            result = Common.ValidateInputBase($("#atbValue"+i), Resource.ValidateType.Required);
+            if (result == "") {
+                result = Common.ValidateInputBase($("#atbValue"+i), Resource.ValidateType.SpecialChar)
+            }
+            if (result == "") {
+                result = Common.ValidateLength($("#atbValue"+i), 0, 40);
+            }
+            if (result == "") {
+                $("#warningAtbValue"+i).attr("hidden", true);
+            } else {
+                $("#warningAtbValue"+i).text(result);
+                $("#warningAtbValue"+i).attr("hidden", false);
+            }
+    }
+    return result;
+}
+
 function validateDescription(control) {
     var result = "";
     result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialCharTextArea);
@@ -65,15 +247,15 @@ function validateDescription(control) {
     return result;
 }
 
-function validateTableAtb() {
+function  validateTableAtb(){
     var numberRow = (document).getElementById("numatb");
     var numRowInt = parseInt(numberRow.getAttribute("value"), 10);
-    for (let i = 1; i <= numRowInt; i++) {
-        $("#atbName" + i).off('keyup focusout');
-        $("#atbValue" + i).off('keyup focusout');
+    for(let i = 1; i <= numRowInt; i++) {
+        $("#atbName"+i).off('keyup focusout');
+        $("#atbValue"+i).off('keyup focusout');
     }
-    for (let i = 1; i <= numRowInt; i++) {
-        $("#atbName" + i).on('keyup focusout', function (e) {
+    for(let i = 1; i <= numRowInt; i++) {
+        $("#atbName"+i).on('keyup focusout', function (e) {
             var result = "";
             result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
             if (result == "") {
@@ -83,13 +265,13 @@ function validateTableAtb() {
                 result = Common.ValidateLength($(this), 0, 40);
             }
             if (result == "") {
-                $("#warningAtbName" + i).attr("hidden", true);
+                $("#warningAtbName"+i).attr("hidden", true);
             } else {
-                $("#warningAtbName" + i).text(result);
-                $("#warningAtbName" + i).attr("hidden", false);
+                $("#warningAtbName"+i).text(result);
+                $("#warningAtbName"+i).attr("hidden", false);
             }
         });
-        $("#atbValue" + i).on('keyup focusout', function (e) {
+        $("#atbValue"+i).on('keyup focusout', function (e) {
             var result = "";
             result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
             if (result == "") {
@@ -99,24 +281,24 @@ function validateTableAtb() {
                 result = Common.ValidateLength($(this), 0, 40);
             }
             if (result == "") {
-                $("#warningAtbValue" + i).attr("hidden", true);
+                $("#warningAtbValue"+i).attr("hidden", true);
             } else {
-                $("#warningAtbValue" + i).text(result);
-                $("#warningAtbValue" + i).attr("hidden", false);
+                $("#warningAtbValue"+i).text(result);
+                $("#warningAtbValue"+i).attr("hidden", false);
             }
         });
     }
 }
 
-function validateTableUnit() {
+function  validateTableUnit(){
     var numberRow = (document).getElementById("numunit");
     var numRowInt = parseInt(numberRow.getAttribute("value"), 10);
-    for (let i = 1; i <= numRowInt; i++) {
-        $("#unitName" + i).off('keyup focusout');
-        $("#unitValue" + i).off('keyup focusout');
+    for(let i = 1; i <= numRowInt; i++) {
+        $("#unitName"+i).off('keyup focusout');
+        $("#unitValue"+i).off('keyup focusout');
     }
-    for (let i = 1; i <= numRowInt; i++) {
-        $("#unitName" + i).on('keyup focusout', function (e) {
+    for(let i = 1; i <= numRowInt; i++) {
+        $("#unitName"+i).on('keyup focusout', function (e) {
             var result = "";
             result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
             if (result == "") {
@@ -126,13 +308,13 @@ function validateTableUnit() {
                 result = Common.ValidateLength($(this), 0, 40);
             }
             if (result == "") {
-                $("#warningUnitName" + i).attr("hidden", true);
+                $("#warningUnitName"+i).attr("hidden", true);
             } else {
-                $("#warningUnitName" + i).text(result);
-                $("#warningUnitName" + i).attr("hidden", false);
+                $("#warningUnitName"+i).text(result);
+                $("#warningUnitName"+i).attr("hidden", false);
             }
         });
-        $("#unitValue" + i).on('keyup focusout', function (e) {
+        $("#unitValue"+i).on('keyup focusout', function (e) {
             var result = "";
             result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
             if (result == "") {
@@ -145,41 +327,43 @@ function validateTableUnit() {
                 result = Common.ValidateLength($(this), 0, 15);
             }
             if (result == "") {
-                $("#warningUnitValue" + i).attr("hidden", true);
+                $("#warningUnitValue"+i).attr("hidden", true);
             } else {
-                $("#warningUnitValue" + i).text(result);
-                $("#warningUnitValue" + i).attr("hidden", false);
+                $("#warningUnitValue"+i).text(result);
+                $("#warningUnitValue"+i).attr("hidden", false);
             }
         });
     }
 }
 
-function validateImageFile() {
+function  validateImageFile(){
     $("#img").on('change', function (e) {
+        var result = "";
         var input = this;
         var url = $(this).val();
         var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-        if (input.files && input.files[0] && (ext == "jpg")) {
+        if (input.files && input.files[0] && (ext == "jpg"))
+        {
             $("#warningImg").attr("hidden", true);
-        } else if (input.files && input.files[0]) {
+        } else if(input.files && input.files[0]) {
             $("#warningImg").text("Không hợp lệ");
+            result = "Không hợp lệ";
             $("#warningImg").attr("hidden", false);
         }
+        return result;
     });
 }
-
-function validateProductweight() {
-    $("#productweight").on('keyup focusout', function (e) {
+function  validateProductweight(control){
         var result = "";
-        result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
+        result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.FloatNumber)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.FloatNumber)
         }
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.SpecialChar)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
         }
         if (result == "") {
-            result = Common.ValidateLength($(this), 0, 10);
+            result = Common.ValidateLength(control, 0, 10);
         }
         if (result == "") {
             $("#warningProductweight").attr("hidden", true);
@@ -187,16 +371,14 @@ function validateProductweight() {
             $("#warningProductweight").text(result);
             $("#warningProductweight").attr("hidden", false);
         }
-    });
+        return result;
 }
 
-function validateStock() {
-    $("#stock").on('keyup focusout', function (e) {
-
+function  validateStock(control){
         var result = "";
-        result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
+        result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.SpecialChar)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
         }
         if (result == "") {
             $("#warningStock").attr("hidden", true);
@@ -204,18 +386,17 @@ function validateStock() {
             $("#warningStock").text(result);
             $("#warningStock").attr("hidden", false);
         }
-    });
+        return result;
 }
 
-function validateProductUnit() {
-    $("#productunit").on('keyup focusout', function (e) {
+function  validateProductUnit(control){
         var result = "";
-        result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
+        result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.SpecialChar)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
         }
         if (result == "") {
-            result = Common.ValidateLength($(this), 0, 40);
+            result = Common.ValidateLength(control, 0, 40);
         }
         if (result == "") {
             $("#warningProductunit").attr("hidden", true);
@@ -223,21 +404,20 @@ function validateProductUnit() {
             $("#warningProductunit").text(result);
             $("#warningProductunit").attr("hidden", false);
         }
-    });
+        return result;
 }
 
-function validateProductWholesaleprice() {
-    $("#productwholesaleprice").on('keyup focusout', function (e) {
+function  validateProductWholesaleprice(control){
         var result = "";
-        result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
+        result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.FloatNumber)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.FloatNumber)
         }
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.SpecialChar)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
         }
         if (result == "") {
-            result = Common.ValidateLength($(this), 0, 15);
+            result = Common.ValidateLength(control, 0, 15);
         }
         if (result == "") {
             $("#warningProductwholesaleprice").attr("hidden", true);
@@ -245,21 +425,20 @@ function validateProductWholesaleprice() {
             $("#warningProductwholesaleprice").text(result);
             $("#warningProductwholesaleprice").attr("hidden", false);
         }
-    });
+        return result;
 }
 
-function validateProductRetailPrice() {
-    $("#productretailprice").on('keyup focusout', function (e) {
+function  validateProductRetailPrice(control){
         var result = "";
-        result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
+        result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.FloatNumber)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.FloatNumber)
         }
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.SpecialChar)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
         }
         if (result == "") {
-            result = Common.ValidateLength($(this), 0, 15);
+            result = Common.ValidateLength(control, 0, 15);
         }
         if (result == "") {
             $("#warningProductRetailprice").attr("hidden", true);
@@ -267,11 +446,11 @@ function validateProductRetailPrice() {
             $("#warningProductRetailprice").text(result);
             $("#warningProductRetailprice").attr("hidden", false);
         }
-    });
+        return result;
 }
 
-function validateProductName(control) {
-        var result = "";
+function  validateProductName(control){
+    var result = "";
         result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
             result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
@@ -285,18 +464,17 @@ function validateProductName(control) {
             $("#warningProductname").text(result);
             $("#warningProductname").attr("hidden", false);
         }
-        return result;
+    return result;
 }
 
-function validateProductID() {
-    $("#productid").on('keyup focusout', function (e) {
+function  validateProductID(control){
         var result = "";
-        result = Common.ValidateInputBase($(this), Resource.ValidateType.Required);
+        result = Common.ValidateInputBase(control, Resource.ValidateType.Required);
         if (result == "") {
-            result = Common.ValidateInputBase($(this), Resource.ValidateType.SpecialChar)
+            result = Common.ValidateInputBase(control, Resource.ValidateType.SpecialChar)
         }
         if (result == "") {
-            result = Common.ValidateLength($(this), 0, 100);
+            result = Common.ValidateLength(control, 0, 100);
         }
         if (result == "") {
             $("#warningProductID").attr("hidden", true);
@@ -304,7 +482,7 @@ function validateProductID() {
             $("#warningProductID").text(result);
             $("#warningProductID").attr("hidden", false);
         }
-    });
+        return result;
 }
 
 
@@ -334,16 +512,16 @@ function addAtb() {
         cell1.innerHTML = '<tr>' +
             '<td><span class="defaultCursor" style="color: red"> *</span>' +
             '<div style="position: relative;"><input type="text" placeholder="Nhập tên thuộc tính" class="attribute-name"' +
-            ' name="atbName' + totalRowCount + '" id="atbName' + totalRowCount + '" required>' +
-            '<span id="warningAtbName' + totalRowCount + '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
+            ' name="atbName' + totalRowCount + '" id="atbName' + totalRowCount + '" >' +
+            '<span id="warningAtbName'+totalRowCount+ '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
         cell2.innerHTML = '<td><span class="defaultCursor" style="color: red"> *</span>' +
             '<div style="position: relative;"><input type="text" placeholder="Nhập giá trị" class="attribute-value"' +
-            ' name="atbValue' + totalRowCount + '" id="atbValue' + totalRowCount + '" required>' +
-            '<span id="warningAtbValue' + totalRowCount + '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
+            ' name="atbValue' + totalRowCount + '" id="atbValue' + totalRowCount + '" >' +
+            '<span id="warningAtbValue'+totalRowCount+ '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
         cell3.innerHTML = '<td><span class="delete-row delete-row-attb">Xóa</span></td>' +
             '</tr>';
         var numberAtb = document.getElementById("numatb");
-        $("#atbName" + totalRowCount).focus();
+        $("#atbName"+totalRowCount).focus();
         numberAtb.setAttribute('value', '' + totalRowCount);
         validateTableAtb();
     });
@@ -357,18 +535,18 @@ function deleteAtb() {
         var totalRowCount = table.rows.length - 1;
         var numberAtb = document.getElementById("numatb");
         numberAtb.setAttribute('value', '' + totalRowCount);
-        for (let j = i + 1; j < totalRowCount + 2; j++) {
-            let k = j - 1;
+        for(let j = i+1; j < totalRowCount+2; j++){
+            let k = j -1;
             var newIndex = document.getElementById("atbName" + j);
-            newIndex.setAttribute('name', 'atbName' + k);
-            newIndex.setAttribute('id', 'atbName' + k);
+            newIndex.setAttribute('name','atbName' + k);
+            newIndex.setAttribute('id','atbName' + k);
             var newIndex1 = document.getElementById("atbValue" + j);
-            newIndex1.setAttribute('name', 'atbValue' + k);
-            newIndex1.setAttribute('id', 'atbValue' + k);
+            newIndex1.setAttribute('name','atbValue' + k);
+            newIndex1.setAttribute('id','atbValue' + k);
             var newIndex2 = document.getElementById("warningAtbName" + j);
-            newIndex2.setAttribute('id', 'warningAtbName' + k);
+            newIndex2.setAttribute('id','warningAtbName' + k);
             var newIndex2 = document.getElementById("warningAtbValue" + j);
-            newIndex2.setAttribute('id', 'warningAtbValue' + k);
+            newIndex2.setAttribute('id','warningAtbValue' + k);
         }
         validateTableAtb();
     });
@@ -387,16 +565,16 @@ function addUnit() {
         cell1.innerHTML = '<tr>' +
             '<td><span class="defaultCursor" style="color: red"> *</span>' +
             '<div style="position: relative;"><input type="text" placeholder="Nhập tên đơn vị" class="unit-name"' +
-            ' name="unitName' + totalRowCount + '" id="unitName' + totalRowCount + '" required>' +
-            '<span id="warningUnitName' + totalRowCount + '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
+            ' name="unitName' + totalRowCount + '" id="unitName' + totalRowCount + '" >' +
+            '<span id="warningUnitName'+totalRowCount+ '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
         cell2.innerHTML = '<td><span class="defaultCursor" style="color: red"> *</span>' +
             '<div style="position: relative;"><input type="text" placeholder="Nhập giá trị" class="unit-value"' +
-            ' name="unitValue' + totalRowCount + '" id="unitValue' + totalRowCount + '" required>' +
-            '<span id="warningUnitValue' + totalRowCount + '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
+            ' name="unitValue' + totalRowCount + '" id="unitValue' + totalRowCount + '" >' +
+            '<span id="warningUnitValue'+totalRowCount+ '" class="warningTextTable defaultCursor validateWarnning" hidden="true"></span></div></td>';
         cell3.innerHTML = '<td><span class="delete-row delete-row-unit" >Xóa</span></td>' +
             '</tr>';
         var numberUnit = document.getElementById("numunit");
-        $("#unitName" + totalRowCount).focus();
+        $("#unitName"+totalRowCount).focus();
         numberUnit.setAttribute('value', '' + totalRowCount);
         validateTableUnit();
     });
@@ -411,18 +589,18 @@ function deleteUnit() {
         var totalRowCount = table.rows.length - 1;
         var numberUnit = document.getElementById("numunit");
         numberUnit.setAttribute('value', '' + totalRowCount);
-        for (let j = i + 1; j < totalRowCount + 2; j++) {
-            let k = j - 1;
+        for(let j = i+1; j < totalRowCount+2; j++){
+            let k = j -1;
             var newIndex = document.getElementById("unitName" + j);
-            newIndex.setAttribute('name', 'unitName' + k);
-            newIndex.setAttribute('id', 'unitName' + k);
+            newIndex.setAttribute('name','unitName' + k);
+            newIndex.setAttribute('id','unitName' + k);
             var newIndex1 = document.getElementById("unitValue" + j);
-            newIndex1.setAttribute('name', 'unitValue' + k);
-            newIndex1.setAttribute('id', 'unitValue' + k);
+            newIndex1.setAttribute('name','unitValue' + k);
+            newIndex1.setAttribute('id','unitValue' + k);
             var newIndex2 = document.getElementById("warningUnitName" + j);
-            newIndex2.setAttribute('id', 'warningUnitName' + k);
+            newIndex2.setAttribute('id','warningUnitName' + k);
             var newIndex2 = document.getElementById("warningUnitValue" + j);
-            newIndex2.setAttribute('id', 'warningUnitValue' + k);
+            newIndex2.setAttribute('id','warningUnitValue' + k);
         }
         validateTableUnit();
     });
@@ -435,7 +613,8 @@ function readURL() {
         var input = this;
         var url = $(this).val();
         var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-        if (input.files && input.files[0] && (ext == "jpg")) {
+        if (input.files && input.files[0]&& (ext == "jpg"))
+        {
             var reader = new FileReader();
 
             reader.onload = function (e) {
