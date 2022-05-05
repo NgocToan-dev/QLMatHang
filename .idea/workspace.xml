@@ -40,21 +40,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="Thêm thông báo thành công">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="ca978f73-e47b-498f-be09-cad36b8e8b5e" name="Default Changelist" comment="thêm check trùng mã mặt hàng">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SuaMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/SuaMatHangServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/com/example/mathang/ThemMatHangServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/java/dao/MatHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/js/themmathang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/suamathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/src/main/webapp/themmathang/themmathang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/SuaMatHangServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/com/example/mathang/ThemMatHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/CategoryDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MatHang/target/classes/dao/MatHangDAO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +111,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
       <option name="adminPort" value="8005" />
       <option name="contextPath" value="/MatHang" />
@@ -183,7 +183,11 @@
       <workItem from="1650174798921" duration="18002000" />
       <workItem from="1650512547189" duration="3158000" />
       <workItem from="1650533875383" duration="493000" />
-      <workItem from="1650551738351" duration="602000" />
+      <workItem from="1650551738351" duration="3665000" />
+      <workItem from="1650598298859" duration="622000" />
+      <workItem from="1650608285877" duration="446000" />
+      <workItem from="1650612146042" duration="735000" />
+      <workItem from="1651756474010" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="Thêm config DAO, chỉ cần extend ra là dùng được">
       <created>1650164845233</created>
@@ -213,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650381546626</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="thêm check trùng mã mặt hàng">
+      <created>1650553424876</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650553424876</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,29 +247,34 @@
     <MESSAGE value="Thêm thông báo thành công" />
     <MESSAGE value="them validation button submit" />
     <MESSAGE value="gan du, bi thieu check trung code mat hang" />
-    <option name="LAST_COMMIT_MESSAGE" value="gan du, bi thieu check trung code mat hang" />
+    <MESSAGE value="thêm check trùng mã mặt hàng" />
+    <option name="LAST_COMMIT_MESSAGE" value="thêm check trùng mã mặt hàng" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650511295325">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1650511295325" />
-    <state width="1493" height="138" key="GridCell.Tab.0.bottom" timestamp="1650534372860">
+    <state width="1493" height="152" key="GridCell.Tab.0.bottom" timestamp="1650613661936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="138" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650534372860" />
-    <state width="1493" height="138" key="GridCell.Tab.0.center" timestamp="1650534372860">
+    <state width="1493" height="152" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650613661936" />
+    <state width="1493" height="152" key="GridCell.Tab.0.center" timestamp="1650613661936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="138" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650534372860" />
-    <state width="1493" height="138" key="GridCell.Tab.0.left" timestamp="1650534372860">
+    <state width="1493" height="152" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650613661936" />
+    <state width="1493" height="152" key="GridCell.Tab.0.left" timestamp="1650613661936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="138" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650534372860" />
-    <state width="1493" height="138" key="GridCell.Tab.0.right" timestamp="1650534372860">
+    <state width="1493" height="152" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650613661936" />
+    <state width="1493" height="152" key="GridCell.Tab.0.right" timestamp="1650613661936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="138" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650534372860" />
+    <state width="1493" height="152" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650613661936" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1650553443095">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1650553443095" />
     <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1650514354913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

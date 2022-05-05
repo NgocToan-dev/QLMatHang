@@ -95,9 +95,25 @@ public class ThemMatHangServlet extends HttpServlet {
                 wholesalePrice, unit, calculateUnit,
                 weight, description, category, attribute);
 
-        daoProcesssing(mathang);
+        boolean checkdao = daoProcesssing(mathang);
 
-        response.sendRedirect("/MatHang");
+        if(!checkdao){
+            String htmlMessage = "Mã mặt hàng đã tồn tại";
+            String check = "1";
+
+            ServletContext sc = request.getServletContext();
+            sc.setAttribute("messages", htmlMessage);
+            sc.setAttribute("check", check);
+            response.sendRedirect("/MatHang/them-mat-hang");
+        }else {
+            String htmlMessage = "Thêm thành công";
+            String check = "1";
+
+            ServletContext sc = request.getServletContext();
+            sc.setAttribute("messages", htmlMessage);
+            sc.setAttribute("check", check);
+            response.sendRedirect("/MatHang/them-mat-hang");
+        }
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {
