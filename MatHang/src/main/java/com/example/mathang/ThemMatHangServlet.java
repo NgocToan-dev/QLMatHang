@@ -10,7 +10,6 @@ import model.ConversionUnit;
 import model.MatHang;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -65,7 +64,6 @@ public class ThemMatHangServlet extends HttpServlet {
             System.out.println(categories.get(i).getName());
         }
         request.setAttribute("listCategory", categories);
-
         // forward request and response to the view
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
@@ -75,7 +73,7 @@ public class ThemMatHangServlet extends HttpServlet {
     public void insertMatHang(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
 
-        String code = toUTF8String(request.getParameter("productid"));
+        String code = request.getParameter("productid");
         String name = toUTF8String(request.getParameter("productname"));
         Part part = request.getPart("img");
         InputStream image = part.getInputStream();
@@ -116,7 +114,6 @@ public class ThemMatHangServlet extends HttpServlet {
             sc.setAttribute("check", check);
             response.sendRedirect("/MatHang/them-mat-hang");
         }
-
     }
 
     private String createAttributeString(int numRowAtb, int numRowUnit, HttpServletRequest request) {
@@ -173,10 +170,9 @@ public class ThemMatHangServlet extends HttpServlet {
         return mathang;
     }
 
-    private boolean daoProcesssing(MatHang mathang) {
+    private void daoProcesssing(MatHang mathang) {
         MatHangDAO matHangDAO = new MatHangDAO();
-        boolean check = matHangDAO.saveMatHang(mathang);
-        return check;
+        matHangDAO.saveMatHang(mathang);
     }
 
     public String toUTF8String(String string){
