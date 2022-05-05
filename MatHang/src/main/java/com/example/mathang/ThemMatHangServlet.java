@@ -99,7 +99,7 @@ public class ThemMatHangServlet extends HttpServlet {
 
         boolean checkdao = daoProcesssing(mathang);
 
-        if(checkdao){
+        if(!checkdao){
             String htmlMessage = "Mã mặt hàng đã tồn tại";
             String check = "1";
 
